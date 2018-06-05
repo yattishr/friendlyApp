@@ -1,4 +1,5 @@
 {
+  "APP_TITLE_TEXT": "friend.Ly",
   "BACK_BUTTON_TEXT": "Back",
 
   "NAME": "Name",
@@ -11,6 +12,11 @@
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Search",
   "TAB3_TITLE": "Settings",
+  "TAB4_TITLE": "Events",
+  "TAB5_TITLE": "Groups",
+  "TAB6_TITLE": "Friends",
+  "TAB7_TITLE": "Invites",
+  "TAB8_TITLE": "Profile",
 
   "MAP_TITLE": "Map",
 
@@ -53,9 +59,12 @@
 
   "ITEM_CREATE_TITLE": "New Item",
   "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
+  "ITEM_CREATE_GROUP_TITLE": "New Group",
 
   "ITEM_NAME_PLACEHOLDER": "Name",
   "ITEM_ABOUT_PLACEHOLDER": "About",
+  "ITEM_GROUP_NAME_PLACEHOLDER": "Group Name",
+  "ITEM_FRIEND_GROUP_PLACEHOLDER": "Friend Name",
 
   "DONE_BUTTON": "Done",
   "CANCEL_BUTTON": "Cancel",

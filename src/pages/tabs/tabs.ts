@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
-import { Tab1Root, Tab2Root, Tab3Root } from '../';
+import { ListMasterPage } from '../list-master/list-master';
+import { ListMasterGroupsPage } from '../list-master-groups/list-master-groups';
+import { SettingsPage } from '../settings/settings';
+import { SearchPage } from '../search/search';
+import { ItemDetailPage } from '../item-detail/item-detail';
 
 @IonicPage()
 @Component({
@@ -10,19 +15,27 @@ import { Tab1Root, Tab2Root, Tab3Root } from '../';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  tab1Root: any = Tab1Root;
-  tab2Root: any = Tab2Root;
-  tab3Root: any = Tab3Root;
+  tab1Root: any = ListMasterPage;
+  tab2Root: any = ListMasterGroupsPage;
+  tab3Root: any = SettingsPage;
+  tab4Root: any = SearchPage;
+  tab5Root: any = ItemDetailPage;
+  mySelectedIndex: number;
 
   tab1Title = " ";
   tab2Title = " ";
   tab3Title = " ";
+  tab4Title = " ";
+  tab5Title = " ";
 
-  constructor(public navCtrl: NavController, public translateService: TranslateService) {
-    translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(values => {
-      this.tab1Title = values['TAB1_TITLE'];
-      this.tab2Title = values['TAB2_TITLE'];
-      this.tab3Title = values['TAB3_TITLE'];
+  constructor(public navCtrl: NavController, public translateService: TranslateService, navParams: NavParams) {
+    translateService.get(['TAB4_TITLE', 'TAB5_TITLE', 'TAB6_TITLE', 'TAB7_TITLE', 'TAB8_TITLE']).subscribe(values => {
+      this.tab1Title = values['TAB4_TITLE'];
+      this.tab2Title = values['TAB5_TITLE'];
+      this.tab3Title = values['TAB6_TITLE'];
+      this.tab4Title = values['TAB7_TITLE'];
+      this.tab5Title = values['TAB8_TITLE'];
     });
+    this.mySelectedIndex = navParams.data.tabIndex || 0;
   }
 }

@@ -36,6 +36,18 @@ export class ListMasterPage {
     addModal.present();
   }
 
+  /* Add new Group Item*/
+  addGroupItem() {
+    let addModal = this.modalCtrl.create('ItemCreateGroupPage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+  }
+  /* Add new Group Item*/
+
   /**
    * Delete an item from the list of items.
    */

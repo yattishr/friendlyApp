@@ -13,6 +13,13 @@ import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
+
+import { ListMasterPage } from '../pages/list-master/list-master';
+import { ListMasterGroupsPage } from '../pages/list-master-groups/list-master-groups';
+import { SettingsPage } from '../pages/settings/settings';
+import { SearchPage } from '../pages/search/search';
+import { ItemDetailPage } from '../pages/item-detail/item-detail';
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -36,7 +43,12 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    ListMasterPage,
+    ListMasterGroupsPage,
+    SettingsPage,
+    SearchPage,
+    ItemDetailPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +65,12 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    ListMasterPage,
+    ListMasterGroupsPage,
+    SettingsPage,
+    SearchPage,
+    ItemDetailPage
   ],
   providers: [
     Api,
