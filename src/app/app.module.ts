@@ -16,9 +16,10 @@ import { MyApp } from './app.component';
 
 import { ListMasterPage } from '../pages/list-master/list-master';
 import { ListMasterGroupsPage } from '../pages/list-master-groups/list-master-groups';
-import { SettingsPage } from '../pages/settings/settings';
+import { ItemListFriendsMasterPage } from '../pages/item-list-friends-master/item-list-friends-master';
 import { SearchPage } from '../pages/search/search';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
+import { ListMasterInvitesPage } from '../pages/list-master-invites/list-master-invites';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -46,8 +47,8 @@ export function provideSettings(storage: Storage) {
     MyApp,
     ListMasterPage,
     ListMasterGroupsPage,
-    SettingsPage,
-    SearchPage,
+    ItemListFriendsMasterPage,
+    ListMasterInvitesPage,
     ItemDetailPage
   ],
   imports: [
@@ -68,8 +69,8 @@ export function provideSettings(storage: Storage) {
     MyApp,
     ListMasterPage,
     ListMasterGroupsPage,
-    SettingsPage,
-    SearchPage,
+    ItemListFriendsMasterPage,
+    ListMasterInvitesPage,
     ItemDetailPage
   ],
   providers: [

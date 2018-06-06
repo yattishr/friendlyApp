@@ -1,7 +1,13 @@
 <ion-header>
 
   <ion-navbar color="favorite">
-    <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'LIST_MASTER_INVITES_TITLE' | translate }}</ion-title>
+
+    <ion-buttons start>
+      <button ion-button icon-only (click)="addGroupItem()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="addItem()">

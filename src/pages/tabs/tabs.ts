@@ -5,9 +5,11 @@ import { NavParams } from 'ionic-angular';
 
 import { ListMasterPage } from '../list-master/list-master';
 import { ListMasterGroupsPage } from '../list-master-groups/list-master-groups';
-import { SettingsPage } from '../settings/settings';
+import { ItemListFriendsMasterPage } from '../item-list-friends-master/item-list-friends-master';
 import { SearchPage } from '../search/search';
 import { ItemDetailPage } from '../item-detail/item-detail';
+import { ListMasterInvitesPage } from '../list-master-invites/list-master-invites';
+
 
 @IonicPage()
 @Component({
@@ -17,8 +19,8 @@ import { ItemDetailPage } from '../item-detail/item-detail';
 export class TabsPage {
   tab1Root: any = ListMasterPage;
   tab2Root: any = ListMasterGroupsPage;
-  tab3Root: any = SettingsPage;
-  tab4Root: any = SearchPage;
+  tab3Root: any = ItemListFriendsMasterPage;
+  tab4Root: any = ListMasterInvitesPage;
   tab5Root: any = ItemDetailPage;
   mySelectedIndex: number;
 
