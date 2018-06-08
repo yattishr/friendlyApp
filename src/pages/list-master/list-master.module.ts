@@ -6,7 +6,7 @@ import { ListMasterPage } from './list-master';
 
 @NgModule({
   declarations: [
-    ListMasterPage,
+    ListMasterPage
   ],
   imports: [
     IonicPageModule.forChild(ListMasterPage),

@@ -13,13 +13,17 @@ import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
-
 import { ListMasterPage } from '../pages/list-master/list-master';
+import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { ListMasterGroupsPage } from '../pages/list-master-groups/list-master-groups';
 import { ItemListFriendsMasterPage } from '../pages/item-list-friends-master/item-list-friends-master';
-import { SearchPage } from '../pages/search/search';
-import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { ListMasterInvitesPage } from '../pages/list-master-invites/list-master-invites';
+// import { ItemDetailPageModule } from '../pages/item-detail/item-detail.module';
+import { ListMasterPageModule } from '../pages/list-master/list-master.module';
+import { ItemDetailPageModule } from '../pages/item-detail/item-detail.module';
+import { ListMasterGroupsPageModule } from '../pages/list-master-groups/list-master-groups.module';
+import { ItemListFriendsMasterPageModule } from '../pages/item-list-friends-master/item-list-friends-master.module';
+import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -44,12 +48,7 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    ListMasterPage,
-    ListMasterGroupsPage,
-    ItemListFriendsMasterPage,
-    ListMasterInvitesPage,
-    ItemDetailPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -62,16 +61,21 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    ListMasterPageModule,
+    ItemDetailPageModule,
+    ListMasterGroupsPageModule,
+    ItemListFriendsMasterPageModule,
+    ListMasterInvitesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     ListMasterPage,
+    ItemDetailPage,
     ListMasterGroupsPage,
     ItemListFriendsMasterPage,
     ListMasterInvitesPage,
-    ItemDetailPage
   ],
   providers: [
     Api,

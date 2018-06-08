@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ListMasterInvitesPage } from './list-master-invites';
 
@@ -8,6 +9,7 @@ import { ListMasterInvitesPage } from './list-master-invites';
   ],
   imports: [
     IonicPageModule.forChild(ListMasterInvitesPage),
+    TranslateModule.forChild()
   ],
 })
 export class ListMasterInvitesPageModule {}
