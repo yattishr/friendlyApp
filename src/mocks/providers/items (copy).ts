@@ -7,48 +7,48 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Watch A Movie",
+    "name": "Burt Bear",
     "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt invited you to Watch A Movie at Ster Kinekor, Sandton City.",
+    "about": "Burt is a Bear.",
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Watch A Movie",
+        "name": "Burt Bear",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt invited you to Watch A Movie at Ster Kinekor, Sandton City.",
+        "about": "Burt is a Bear."
       },
       {
-        "name": "Drinks and Dining",
+        "name": "Charlie Cheetah",
         "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie invited you to Drinks and Dining at Cafe Del Ma."
+        "about": "Charlie is a Cheetah."
       },
       {
-        "name": "Music Concert",
+        "name": "Donald Duck",
         "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald invited you to a Bon Jovi Music Concert."
+        "about": "Donald is a Duck."
       },
       {
-        "name": "Sports and Recreation",
+        "name": "Eva Eagle",
         "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva invited you to a England vs Brazil Soccer match."
+        "about": "Eva is an Eagle."
       },
       {
-        "name": "Drinks and Dining",
+        "name": "Ellie Elephant",
         "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie invited you to coffee at Kramers, Johannesburg."
+        "about": "Ellie is an Elephant."
       },
       {
-        "name": "Watch A Movie",
+        "name": "Molly Mouse",
         "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly invited you to Watch A Movie at Nu Metro Pavilion."
+        "about": "Molly is a Mouse."
       },
       {
-        "name": "Sports and Recreation",
+        "name": "Paul Puppy",
         "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul invited you to an outdoor event."
+        "about": "Paul is a Puppy."
       }
     ];
 

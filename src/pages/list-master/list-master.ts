@@ -4,6 +4,10 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
 
+import { ItemCreateEventMoviePage } from '../pages/item-create-event-movie/item-create-event-movie';
+import { ItemCreateEventMoviePageModule } from '../pages/item-create-event-movie/item-create-event-movie.module';
+
+
 @IonicPage()
 @Component({
   selector: 'page-list-master',
@@ -63,4 +67,15 @@ export class ListMasterPage {
       item: item
     });
   }
+
+  /**
+   * Navigate to the Watch Movie Events page.
+   */
+  navigateToMovieEventsPage() {
+    let addModal = this.modalCtrl.create('ItemCreateEventMoviePage');
+    addModal.present();
+    // this.navCtrl.push('ItemCreateEventMoviePage');
+  }
+
+
 }
