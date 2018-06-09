@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
+import { Item } from '../../models/item';
+import { Items } from '../../providers';
+
 /**
  * Generated class for the ListMasterFriendsPage page.
  *
@@ -14,8 +17,10 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
   templateUrl: 'list-master-friends.html',
 })
 export class ListMasterFriendsPage {
+    currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public items: Items) {
+    this.currentItems = this.items.query();
   }
 
   ionViewDidLoad() {
@@ -33,6 +38,13 @@ export class ListMasterFriendsPage {
     addModal.present();
   }
   /* Add new Group Item*/
+
+  /**
+   * Delete an item from the list of items.
+   */
+  deleteItem(item) {
+    this.items.delete(item);
+  }
 
 
 }

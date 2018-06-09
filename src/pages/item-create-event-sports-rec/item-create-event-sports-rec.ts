@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 /**
  * Generated class for the ItemCreateEventSportsRecPage page.
@@ -15,7 +16,13 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class ItemCreateEventSportsRecPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  isReadyToSave: boolean;
+
+  item: any;
+
+  form: FormGroup;  
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder) {
   }
 
   ionViewDidLoad() {
