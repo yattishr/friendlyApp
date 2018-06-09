@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { ItemCreateEventMoviePage } from './item-create-event-movie';
+import { ListMasterFriendsPage } from './list-master-friends';
 
 @NgModule({
   declarations: [
-    ItemCreateEventMoviePage,
+    ListMasterFriendsPage,
   ],
   imports: [
-    IonicPageModule.forChild(ItemCreateEventMoviePage),
+    IonicPageModule.forChild(ListMasterFriendsPage),
     TranslateModule.forChild()
   ],
+  exports: [
+    ListMasterFriendsPage
+  ]
 })
-export class ItemCreateEventMoviePageModule {}
+export class ListMasterFriendsPageModule {}

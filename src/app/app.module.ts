@@ -16,13 +16,12 @@ import { MyApp } from './app.component';
 import { ListMasterPage } from '../pages/list-master/list-master';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { ListMasterGroupsPage } from '../pages/list-master-groups/list-master-groups';
-import { ItemListFriendsMasterPage } from '../pages/item-list-friends-master/item-list-friends-master';
+import { ListMasterFriendsPage } from '../pages/list-master-friends/list-master-friends';
 import { ListMasterInvitesPage } from '../pages/list-master-invites/list-master-invites';
-// import { ItemDetailPageModule } from '../pages/item-detail/item-detail.module';
 import { ListMasterPageModule } from '../pages/list-master/list-master.module';
 import { ItemDetailPageModule } from '../pages/item-detail/item-detail.module';
 import { ListMasterGroupsPageModule } from '../pages/list-master-groups/list-master-groups.module';
-import { ItemListFriendsMasterPageModule } from '../pages/item-list-friends-master/item-list-friends-master.module';
+import { ListMasterFriendsPageModule } from '../pages/list-master-friends/list-master-friends.module';
 import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 
 // The translate loader needs to know where to load i18n files
@@ -65,7 +64,7 @@ export function provideSettings(storage: Storage) {
     ListMasterPageModule,
     ItemDetailPageModule,
     ListMasterGroupsPageModule,
-    ItemListFriendsMasterPageModule,
+    ListMasterFriendsPageModule,
     ListMasterInvitesPageModule
   ],
   bootstrap: [IonicApp],
@@ -74,7 +73,7 @@ export function provideSettings(storage: Storage) {
     ListMasterPage,
     ItemDetailPage,
     ListMasterGroupsPage,
-    ItemListFriendsMasterPage,
+    ListMasterFriendsPage,
     ListMasterInvitesPage,
   ],
   providers: [

@@ -4,10 +4,6 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
 
-import { ItemCreateEventMoviePage } from '../pages/item-create-event-movie/item-create-event-movie';
-import { ItemCreateEventMoviePageModule } from '../pages/item-create-event-movie/item-create-event-movie.module';
-
-
 @IonicPage()
 @Component({
   selector: 'page-list-master',
@@ -72,9 +68,61 @@ export class ListMasterPage {
    * Navigate to the Watch Movie Events page.
    */
   navigateToMovieEventsPage() {
+
     let addModal = this.modalCtrl.create('ItemCreateEventMoviePage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
     addModal.present();
-    // this.navCtrl.push('ItemCreateEventMoviePage');
+
+  }
+
+
+  /**
+   * Navigate to the Drinks and Dining Events page.
+   */
+  navigateToDrinksDiningEventsPage() {
+
+    let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningPage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+
+  }
+
+  /**
+   * Navigate to the Sports and Recreation Events page.
+   */
+  navigateToSportsRecreationEventsPage() {
+
+    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecPage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+
+  }
+
+  /**
+   * Navigate to the Music Concert Events page.
+   */
+  navigateToMusicConcertEventsPage() {
+
+    let addModal = this.modalCtrl.create('ItemCreateEventMusicConcertPage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+
   }
 
 

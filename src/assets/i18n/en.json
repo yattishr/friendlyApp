@@ -63,6 +63,11 @@
   "ITEM_CREATE_TITLE": "New Item",
   "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
   "ITEM_CREATE_GROUP_TITLE": "New Group",
+  "ITEM_WATCH_MOVIE_EVENT": "Watch A Movie",
+  "ITEM_DRINKS_DINING_EVENT": "Drinks and Dining",
+  "ITEM_SPORTS_RECREATION_EVENT": "Sports and Recreation",
+  "ITEM_MUSIC_CONCERT_EVENT": "Music Concert",        
+
 
   "ITEM_NAME_PLACEHOLDER": "Name",
   "ITEM_ABOUT_PLACEHOLDER": "About",

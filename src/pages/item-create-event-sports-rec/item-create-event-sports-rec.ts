@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
- * Generated class for the ItemCreateEventMoviePage page.
+ * Generated class for the ItemCreateEventSportsRecPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 
 @IonicPage()
 @Component({
-  selector: 'page-item-create-event-movie',
-  templateUrl: 'item-create-event-movie.html',
+  selector: 'page-item-create-event-sports-rec',
+  templateUrl: 'item-create-event-sports-rec.html',
 })
-export class ItemCreateEventMoviePage {
+export class ItemCreateEventSportsRecPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ItemCreateEventMoviePage');
+    console.log('ionViewDidLoad ItemCreateEventSportsRecPage');
   }
 
   /**
@@ -37,6 +37,5 @@ export class ItemCreateEventMoviePage {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
   }
-
 
 }

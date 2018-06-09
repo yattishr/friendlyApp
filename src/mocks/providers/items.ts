@@ -9,7 +9,7 @@ export class Items {
   defaultItem: any = {
     "name": "Watch A Movie",
     "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt invited you to Watch A Movie at Ster Kinekor, Sandton City.",
+    "about": "You invited Steffie to Watch A Movie at Ster Kinekor, Sandton City."
   };
 
 
@@ -18,7 +18,7 @@ export class Items {
       {
         "name": "Watch A Movie",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt invited you to Watch A Movie at Ster Kinekor, Sandton City.",
+        "about": "You invited Steffie to Watch A Movie at Ster Kinekor, Sandton City."
       },
       {
         "name": "Drinks and Dining",

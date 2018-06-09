@@ -5,7 +5,7 @@ import { NavParams } from 'ionic-angular';
 
 import { ListMasterPage } from '../list-master/list-master';
 import { ListMasterGroupsPage } from '../list-master-groups/list-master-groups';
-import { ItemListFriendsMasterPage } from '../item-list-friends-master/item-list-friends-master';
+import { ListMasterFriendsPage } from '../list-master-friends/list-master-friends';
 import { ItemDetailPage } from '../item-detail/item-detail';
 import { ListMasterInvitesPage } from '../list-master-invites/list-master-invites';
 
@@ -18,7 +18,7 @@ import { ListMasterInvitesPage } from '../list-master-invites/list-master-invite
 export class TabsPage {
   tab1Root: any = ListMasterPage;
   tab2Root: any = ListMasterGroupsPage;
-  tab3Root: any = ItemListFriendsMasterPage;
+  tab3Root: any = ListMasterFriendsPage;
   tab4Root: any = ListMasterInvitesPage;
   tab5Root: any = ItemDetailPage;
   mySelectedIndex: number;
