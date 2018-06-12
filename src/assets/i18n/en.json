@@ -66,8 +66,13 @@
   "ITEM_WATCH_MOVIE_EVENT": "Watch A Movie",
   "ITEM_DRINKS_DINING_EVENT": "Drinks and Dining",
   "ITEM_SPORTS_RECREATION_EVENT": "Sports and Recreation",
-  "ITEM_MUSIC_CONCERT_EVENT": "Music Concert",        
+  "ITEM_MUSIC_CONCERT_EVENT": "Music Concert",
 
+  "ITEM_EVENT_MOVIE_NAME_PLACEHOLDER": "What Movie",
+  "ITEM_EVENT_MOVIE_DATE_PLACEHOLDER": "When",
+  "ITEM_EVENT_MOVIE_CINEMA": "Which Cinema",
+  "ITEM_EVENT_MOVIE_MEET_TIME": "Meetup Time",
+  "ITEM_EVENT_MOVIE_START_TIME": "Movie Start Time",
 
   "ITEM_NAME_PLACEHOLDER": "Name",
   "ITEM_ABOUT_PLACEHOLDER": "About",

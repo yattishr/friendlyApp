@@ -64,66 +64,26 @@ export class ListMasterPage {
     });
   }
 
-  /**
-   * Navigate to the Watch Movie Events page.
-   */
-  navigateToMovieEventsPage() {
+  /* Page Types. DO NOT DELETE.
+  ItemCreateEventDrinksDiningPage
+  ItemCreateEventSportsRecPage
+  ItemCreateEventMusicConcertPage
+  ItemCreateEventMoviePage
+  */
 
-    let addModal = this.modalCtrl.create('ItemCreateEventMoviePage');
+  /**
+   * Navigate to the relevant Events page.
+   */
+  navigateToEventsPage(eventPageType) {
+    let addModal = this.modalCtrl.create(eventPageType);
     addModal.onDidDismiss(item => {
       if (item) {
         this.items.add(item);
       }
     })
     addModal.present();
-
   }
 
-
-  /**
-   * Navigate to the Drinks and Dining Events page.
-   */
-  navigateToDrinksDiningEventsPage() {
-
-    let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningPage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
-
-  }
-
-  /**
-   * Navigate to the Sports and Recreation Events page.
-   */
-  navigateToSportsRecreationEventsPage() {
-
-    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecPage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
-
-  }
-
-  /**
-   * Navigate to the Music Concert Events page.
-   */
-  navigateToMusicConcertEventsPage() {
-
-    let addModal = this.modalCtrl.create('ItemCreateEventMusicConcertPage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
-
-  }
 
 
 }

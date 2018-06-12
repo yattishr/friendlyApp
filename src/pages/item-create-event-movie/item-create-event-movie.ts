@@ -20,9 +20,23 @@ export class ItemCreateEventMoviePage {
 
   item: any;
 
-  form: FormGroup;  
+  form: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder) {
+    this.form = formBuilder.group({
+      movieName: ['', Validators.required],
+      movieDate: [''],
+      movieCinema: [''],
+      movieMeetUpTime: [''],
+      movieStartTime: ['']
+    });
+
+    // Watch the form for changes, and
+    this.form.valueChanges.subscribe((v) => {
+      this.isReadyToSave = this.form.valid;
+    });
+
+
   }
 
   ionViewDidLoad() {
