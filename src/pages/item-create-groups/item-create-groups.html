@@ -24,50 +24,83 @@
 
 
 <ion-content>
-  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
-    <ion-list>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_GROUP_NAME_PLACEHOLDER' | translate }}" formControlName="groupName"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_FRIEND_GROUP_PLACEHOLDER' | translate }}" formControlName="friendName1"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_FRIEND_GROUP_PLACEHOLDER' | translate }}" formControlName="friendName2"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_FRIEND_GROUP_PLACEHOLDER' | translate }}" formControlName="friendName3"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_FRIEND_GROUP_PLACEHOLDER' | translate }}" formControlName="friendName4"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input type="text" placeholder="{{ 'ITEM_FRIEND_GROUP_PLACEHOLDER' | translate }}" formControlName="friendName5"></ion-input>
-      </ion-item>
-    </ion-list>
+  <form
+     [formGroup]="form"
+     (ngSubmit)="manage(form.value)">
+      <ion-list margin-bottom>
+        <ion-item
+           margin-bottom
+           no-lines>
+           <ion-label floating>Group name</ion-label>
 
-    <ion-list>
-      <ion-item-sliding *ngFor="let item of currentItems">
-        <button ion-item (click)="openItem(item-groups)">
-          <h2>{{item.groupname}}</h2>
-          <p>{{item.friendname1}}</p>
-          <!--ion-note item-end *ngIf="item.note">{{item.groupname}}</ion-note-->
-        </button>
+           <!-- Assign our first FormControl of name to the input field -->
+               <ion-input
+                  type="text"
+                  maxlength="40"
+                  formControlName="name"></ion-input>
+               <span>Please enter a group name of no more than 40 characters</span>
+            </ion-item>
 
-        <ion-item-options>
-          <button ion-button color="danger" (click)="deleteItem(item)">
-            {{ 'DELETE_BUTTON' | translate }}
-          </button>
-        </ion-item-options>
-      </ion-item-sliding>
+            <!-- Assign the technologies FormArray to the form
+                     where we want to track/generate new input track fields -->
+             <div
+                formArrayName="technologies"
+                margin-bottom>
 
-      <!--ion-item>Mickey Mouse</ion-item>
-      <ion-item>Donald Duck</ion-item>
-      <ion-item>Minnie Mouse</ion-item>
-      <ion-item>Daffy Duck</ion-item>
-      <ion-item>Popeye the Sailor-man</ion-item-->
+                <!-- Assign a FormGroupName property binding to track
+                     and manage each separate generated input field.
+                     Also iterate through the technologies FormArray to
+                     correctly track/render new input fields against
+                     existing fields -->
+                <section
+                   [formGroupName]="i"
+                   *ngFor="let tech of form.controls.technologies.controls; let i = index">
+                   <ion-item-group>
+                      <ion-item-divider color="light">Friend #{{ i + 1 }}</ion-item-divider>
+                      <ion-item>
+                         <ion-label floating>Friends Name</ion-label>
+                         <ion-input
+                            type="text"
+                            maxlength="50"
+                            formControlName="name"></ion-input>
+                      </ion-item>
 
-    </ion-list>
+                      <!-- Allow generated input field to be removed -->
+                      <span
+                         float-right
+                         ion-button
+                         icon-left
+                         clear
+                         *ngIf="form.controls.technologies.length > 1"
+                         (click)="removeInputField(i)">
+                         <ion-icon name="close"></ion-icon>
+                         Remove Friend
+                      </span>
+                   </ion-item-group>
+                </section>
+             </div>
 
-  </form>
+             <!-- Allow new input field to be generated/added -->
+             <span
+                ion-button
+                float-left
+                icon-left
+                clear
+                (click)="addNewInputField()">
+                   <ion-icon name="add"></ion-icon>
+                   Add Friend
+             </span>
+
+
+         </ion-list>
+         <!-- Only allow form to be submitted IF validation criteria for
+                  input fields has been successfully passed -->
+             <button
+             ion-button
+             block
+             margin-top
+             color="primary"
+             text-center
+             [disabled]="!form.valid">Submit</button>
+       </form>
 </ion-content>

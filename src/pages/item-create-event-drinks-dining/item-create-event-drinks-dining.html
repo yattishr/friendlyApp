@@ -30,43 +30,36 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header color="headercolor">
-      Make A Selection
-    </ion-card-header>
+  <ion-list>
+    <button ion-item (click)="goTo('Drinks')">
+      <ion-icon name="ios-wine" item-start></ion-icon>
+      Drinks
+    </button>
 
-    <ion-list>
-      <button ion-item>
-        <ion-icon name="ios-wine" item-start></ion-icon>
-        Drinks
-      </button>
+    <button ion-item (click)="goTo('Coffee')">
+      <ion-icon name="cafe" item-start></ion-icon>
+      Coffee
+    </button>
 
-      <button ion-item>
-        <ion-icon name="cafe" item-start></ion-icon>
-        Coffee
-      </button>
+    <button ion-item (click)="goTo('Lunch')">
+      <ion-icon name="md-restaurant" item-start></ion-icon>
+      Lunch
+    </button>
 
-      <button ion-item>
-        <ion-icon name="md-restaurant" item-start></ion-icon>
-        Lunch
-      </button>
+    <button ion-item (click)="goTo('Dinner')">
+      <ion-icon name="ios-restaurant" item-start></ion-icon>
+      Dinner
+    </button>
 
-      <button ion-item>
-        <ion-icon name="ios-restaurant" item-start></ion-icon>
-        Dinner
-      </button>
+    <button ion-item (click)="goTo('Fine Dining')">
+      <ion-icon name="ios-bowtie-outline" item-start></ion-icon>
+      Fine Dining
+    </button>
 
-      <button ion-item>
-        <ion-icon name="ios-restaurant-outline" item-start></ion-icon>
-        Fine Dining
-      </button>
+    <button ion-item (click)="goTo('Breakfast')">
+      <ion-icon name="ios-cafe-outline" item-start></ion-icon>
+      Breakfast
+    </button>
 
-      <button ion-item>
-        <ion-icon name="ios-cafe-outline" item-start></ion-icon>
-        Breakfast
-      </button>
-
-    </ion-list>
-  </ion-card>
-
+  </ion-list>
 </ion-content>

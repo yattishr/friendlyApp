@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'item-create-event-drinks-dining-detail.html',
 })
 export class ItemCreateEventDrinksDiningDetailPage {
+  color: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+        this.color = navParams.get('data');
   }
 
   ionViewDidLoad() {

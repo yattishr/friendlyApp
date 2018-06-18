@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { ItemCreateEventDrinksDiningDetailPage } from '../item-create-event-drinks-dining-detail'
+// import { ItemCreateEventDrinksDiningDetailPageModule } from '../item-create-event-drinks-dining-detail/item-create-event-drinks-dining-detail'
 
 /**
  * Generated class for the ItemCreateEventDrinksDiningPage page.
@@ -44,6 +46,22 @@ export class ItemCreateEventDrinksDiningPage {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
   }
+
+  // goTo(dataParam) {
+  //     dataParam = dataParam || ' Selected';
+  //
+  //     this.navCtrl.push(ItemCreateEventDrinksDiningDetailPage, {
+  //       data: dataParam
+  //     });
+  //   }
+
+  // goTo(color) {
+  //     color = color || ' Selected';
+  //     this.navCtrl.push(ItemCreateEventDrinksDiningDetailPage, {
+  //       data: color
+  //     });
+  // }
+
 
 
 

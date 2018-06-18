@@ -4,9 +4,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { ItemCreateEventDrinksDiningPage } from './item-create-event-drinks-dining';
 
+
+
 @NgModule({
   declarations: [
-    ItemCreateEventDrinksDiningPage,
+    ItemCreateEventDrinksDiningPage
   ],
   imports: [
     IonicPageModule.forChild(ItemCreateEventDrinksDiningPage),
