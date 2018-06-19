@@ -22,11 +22,12 @@ export class ItemCreateGroupPage {
       technologies: this._FB.array([
          this.initTechnologyFields()
       ])
-    });
+    })
 
     // Watch the form for changes, and
-    this.form.valueChanges.subscribe((v) => {
+    this.form.valueChanges.subscribe((data) => {
       this.isReadyToSave = this.form.valid;
+      console.log("Watching for changes..." + data);
     });
   }
 

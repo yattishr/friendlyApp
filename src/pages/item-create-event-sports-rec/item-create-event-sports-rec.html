@@ -30,5 +30,41 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <button ion-item (click)="goTo('Drinks')">
+      <ion-icon name="md-restaurant" item-start></ion-icon>
+      Picnic
+    </button>
 
+    <button ion-item (click)="goTo('Coffee')">
+      <ion-icon name="ios-walk-outline" item-start></ion-icon>
+      Hiking
+    </button>
+
+    <button ion-item (click)="goTo('Lunch')">
+      <ion-icon name="ios-football" item-start></ion-icon>
+      Indoor Soccer
+    </button>
+
+    <button ion-item (click)="goTo('Dinner')">
+      <ion-icon name="ios-baseball-outline" item-start></ion-icon>
+      Indoor Cricket
+    </button>
+
+    <button ion-item (click)="goTo('Fine Dining')">
+      <ion-icon name="ios-football-outline" item-start></ion-icon>
+      Live Football Game
+    </button>
+
+    <button ion-item (click)="goTo('Breakfast')">
+      <ion-icon name="ios-paw" item-start></ion-icon>
+      Dog Park
+    </button>
+
+    <button ion-item (click)="goTo('Breakfast')">
+      <ion-icon name="ios-paw-outline" item-start></ion-icon>
+      Zoo
+    </button>
+
+  </ion-list>
 </ion-content>
