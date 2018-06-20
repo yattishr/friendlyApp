@@ -30,5 +30,40 @@
 
 
 <ion-content padding>
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Music Concert</ion-label>
+        <ion-input type="text" formControlName="concertName"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label floating>Concert Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="concertDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concert Start Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="concertStartTime"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concert Venue</ion-label>
+        <ion-input type="text" formControlName="concertVenue"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Meetup Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
+      </ion-item>
+
+      <ion-item-divider color="headercolor">
+        <button ion-button icon-only (click)="itemGroupSelect()">
+          <ion-icon name="ios-add"></ion-icon>
+        </button>
+      <span style="display: inline-block;" item-end>Invite Friends</span>
+      </ion-item-divider>
+
+    </ion-list>
+  </form>
 </ion-content>

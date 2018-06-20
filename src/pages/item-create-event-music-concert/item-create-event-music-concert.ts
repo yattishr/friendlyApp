@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { ModalController } from 'ionic-angular';
+import { Item } from '../../models/item';
+import { Items } from '../../providers';
 /**
  * Generated class for the ItemCreateEventMusicConcertPage page.
  *
@@ -16,18 +18,54 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ItemCreateEventMusicConcertPage {
 
+  currentItems: Item[];
+
   isReadyToSave: boolean;
 
   item: any;
 
-  form: FormGroup;  
+  form: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController, public items: Items) {
+
+    this.currentItems = this.items.query();
+
+    this.form = formBuilder.group({
+      concertName: ['', Validators.required],
+      concertDate: [''],
+      concertStartTime: [''],
+      concertVenue: [''],
+      concertMeetUpTime: ['']
+    });
+
+    // Watch the form for changes, and
+    this.form.valueChanges.subscribe((v) => {
+      this.isReadyToSave = this.form.valid;
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventMusicConcertPage');
   }
+
+
+  /* Add new Group Item*/
+  itemGroupSelect() {
+    let addModal = this.modalCtrl.create('ListMasterGroupsModalPage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+  }
+  /* Add new Group Item*/
+
+
+createItem() {
+  console.log("create item function triggered...");
+}
+
 
   /**
    * The user cancelled, so we dismiss without sending data back.
