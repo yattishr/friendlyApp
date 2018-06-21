@@ -17,10 +17,8 @@ export class ItemCreateEventDrinksDiningDetailPage {
   color: string;
 
   constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController) {
-        // this.color = navParams.get('data');
-        this.value = params.get('dataParam');
-        // params.get('dataParam');
-        console.log('Data value', params.get('value'));
+        params.get('dataParam');
+        console.log('Data value', params.get('dataParam'));
   }
 
   ionViewDidLoad() {
