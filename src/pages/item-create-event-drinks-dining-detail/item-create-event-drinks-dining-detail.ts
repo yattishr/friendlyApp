@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ItemCreateEventDrinksDiningDetailPage page.
@@ -16,12 +16,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ItemCreateEventDrinksDiningDetailPage {
   color: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-        this.color = navParams.get('data');
+  constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController) {
+        // this.color = navParams.get('data');
+        this.value = params.get('dataParam');
+        // params.get('dataParam');
+        console.log('Data value', params.get('value'));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventDrinksDiningDetailPage');
   }
+
+  cancel() {
+    this.viewCtrl.dismiss();
+  }
+
+  /**
+   * The user is done and wants to create the item, so return it
+   * back to the presenter.
+   */
+  done() {
+    // if (!this.form.valid) { return; }
+    // this.viewCtrl.dismiss(this.form.value);
+    console.log("Done button clicked...");
+  }
+
 
 }

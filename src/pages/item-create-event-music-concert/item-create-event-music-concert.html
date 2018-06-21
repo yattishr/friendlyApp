@@ -56,14 +56,10 @@
         <ion-label floating>Meetup Time</ion-label>
         <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
       </ion-item>
-
-      <ion-item-divider color="headercolor">
-        <button ion-button icon-only (click)="itemGroupSelect()">
-          <ion-icon name="ios-add"></ion-icon>
-        </button>
-      <span style="display: inline-block;" item-end>Invite Friends</span>
-      </ion-item-divider>
-
     </ion-list>
+    <ion-item-divider color="headercolor">
+      <span style="display: inline-block;" item-start><ion-icon name="ios-add" (click)="itemGroupSelect()"></ion-icon></span>
+      <span style="display: inline-block;" item-end>Invite Friends</span>
+    </ion-item-divider>
   </form>
 </ion-content>

@@ -31,8 +31,9 @@ export class ListMasterGroupsModalPage {
    * back to the presenter.
    */
   done() {
-    if (!this.form.valid) { return; }
-    this.viewCtrl.dismiss(this.form.value);
+    // if (!this.form.valid) { return; }
+    // this.viewCtrl.dismiss(this.form.value);
+    console.log("Done button clicked...");
   }
 
 

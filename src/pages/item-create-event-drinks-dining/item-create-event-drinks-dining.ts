@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { ItemCreateEventDrinksDiningDetailPage } from '../item-create-event-drinks-dining-detail'
-// import { ItemCreateEventDrinksDiningDetailPageModule } from '../item-create-event-drinks-dining-detail/item-create-event-drinks-dining-detail'
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ModalController } from 'ionic-angular';
+import { Item } from '../../models/item';
+import { Items } from '../../providers';
 
 /**
  * Generated class for the ItemCreateEventDrinksDiningPage page.
@@ -18,17 +19,32 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ItemCreateEventDrinksDiningPage {
 
+  currentItems: Item[];
+
   isReadyToSave: boolean;
 
   item: any;
 
   form: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController, public items: Items) {
+    this.currentItems = this.items.query();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventDrinksDiningPage');
+  }
+
+  /* Add new Group Item*/
+  goTo(dataParam) {
+    let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningDetailPage', { dataParam });
+    // console.log(dataParam);
+    // addModal.onDidDismiss(item => {
+    //   if (item) {
+    //     this.items.add(item);
+    //   }
+    // })
+    addModal.present();
   }
 
   /**
@@ -46,22 +62,6 @@ export class ItemCreateEventDrinksDiningPage {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
   }
-
-  // goTo(dataParam) {
-  //     dataParam = dataParam || ' Selected';
-  //
-  //     this.navCtrl.push(ItemCreateEventDrinksDiningDetailPage, {
-  //       data: dataParam
-  //     });
-  //   }
-
-  // goTo(color) {
-  //     color = color || ' Selected';
-  //     this.navCtrl.push(ItemCreateEventDrinksDiningDetailPage, {
-  //       data: color
-  //     });
-  // }
-
 
 
 

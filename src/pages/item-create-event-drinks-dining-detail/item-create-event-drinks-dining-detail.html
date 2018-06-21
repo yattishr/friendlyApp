@@ -7,17 +7,31 @@
 <ion-header>
 
   <ion-navbar color="headercolor">
-    <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ color }} </ion-title>
-    <!--ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
+    <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_DRINKS_DINING_EVENT' | translate }}</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="cancel()">
+        <span color="dark" showWhen="ios">
+          {{ 'CANCEL_BUTTON' | translate }}
+        </span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
-    </ion-buttons-->
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
+        <span color="dark" showWhen="ios">
+          {{ 'DONE_BUTTON' | translate }}
+        </span>
+        <ion-icon name="md-checkmark" showWhen="core,android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item-divider color="headercolor">
+    <span style="display: inline-block;" item-start>Drinks and Dining | {{ dataParam }} </span>
+  </ion-item-divider>
 
 </ion-content>

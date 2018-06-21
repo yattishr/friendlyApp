@@ -19,14 +19,12 @@ import { ListMasterGroupsPage } from '../pages/list-master-groups/list-master-gr
 import { ListMasterFriendsPage } from '../pages/list-master-friends/list-master-friends';
 import { ListMasterInvitesPage } from '../pages/list-master-invites/list-master-invites';
 import { ItemCreateEventDrinksDiningPage } from '../pages/item-create-event-drinks-dining/item-create-event-drinks-dining';
-import { ItemCreateEventDrinksDiningDetailPage } from '../pages/item-create-event-drinks-dining-detail/item-create-event-drinks-dining-detail';
 import { ListMasterPageModule } from '../pages/list-master/list-master.module';
 import { ItemDetailPageModule } from '../pages/item-detail/item-detail.module';
 import { ListMasterGroupsPageModule } from '../pages/list-master-groups/list-master-groups.module';
 import { ListMasterFriendsPageModule } from '../pages/list-master-friends/list-master-friends.module';
 import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 import { ItemCreateEventDrinksDiningPageModule } from '../pages/item-create-event-drinks-dining/item-create-event-drinks-dining.module';
-import { ItemCreateEventDrinksDiningDetailPageModule } from '../pages/item-create-event-drinks-dining-detail/item-create-event-drinks-dining-detail.module';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -71,7 +69,6 @@ export function provideSettings(storage: Storage) {
     ListMasterFriendsPageModule,
     ListMasterInvitesPageModule,
     ItemCreateEventDrinksDiningPageModule,
-    ItemCreateEventDrinksDiningDetailPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -82,7 +79,6 @@ export function provideSettings(storage: Storage) {
     ListMasterFriendsPage,
     ListMasterInvitesPage,
     ItemCreateEventDrinksDiningPage,
-    ItemCreateEventDrinksDiningDetailPage
   ],
   providers: [
     Api,
