@@ -15,6 +15,7 @@ $font-path: "../assets/fonts";
 $text-color:        #000;
 $background-color:  #fff;
 
+
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -34,9 +35,8 @@ $colors: (
   google:     #dc4a38,
   vimeo:      #23b6ea,
   facebook:   #3b5998,
-  tabcolor:   #488aff,
-  headercolor: #488aff,
-  dividercolor: #488aff
+  tabcolor:   #e74c3c,
+  headercolor: #488aff
 );
 
 

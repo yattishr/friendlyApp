@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the ItemCreateEventSportsRecPage page.
@@ -22,12 +23,20 @@ export class ItemCreateEventSportsRecPage {
 
   form: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventSportsRecPage');
   }
+
+
+  /* Launch Sports and Rec Detail page. */
+  goTo(dataParam: dataParam) {
+    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecDetailPage', { dataParam: dataParam });
+    addModal.present();
+  }
+  /* Launch Sports and Rec Detail page. */
 
   /**
    * The user cancelled, so we dismiss without sending data back.

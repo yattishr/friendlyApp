@@ -35,17 +35,13 @@ export class ItemCreateEventDrinksDiningPage {
     console.log('ionViewDidLoad ItemCreateEventDrinksDiningPage');
   }
 
-  /* Add new Group Item*/
+  /* Launch Drinks and Dining Detail page. */
   goTo(dataParam) {
     let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningDetailPage', { dataParam });
-    // console.log(dataParam);
-    // addModal.onDidDismiss(item => {
-    //   if (item) {
-    //     this.items.add(item);
-    //   }
-    // })
     addModal.present();
   }
+  /* Launch Drinks and Dining Detail page. */  
+
 
   /**
    * The user cancelled, so we dismiss without sending data back.

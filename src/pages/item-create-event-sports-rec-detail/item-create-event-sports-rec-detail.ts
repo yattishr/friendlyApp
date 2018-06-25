@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ItemCreateEventSportsRecDetailPage page.
@@ -15,11 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ItemCreateEventSportsRecDetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public _navParams: NavParams, public viewCtrl: ViewController) {
+    console.log("this is my parameter: ", _navParams.get('dataParam'));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventSportsRecDetailPage');
+  }
+
+  cancel() {
+    this.viewCtrl.dismiss();
+  }
+
+  /**
+   * The user is done and wants to create the item, so return it
+   * back to the presenter.
+   */
+  done() {
+    // if (!this.form.valid) { return; }
+    // this.viewCtrl.dismiss(this.form.value);
+    console.log("Done button clicked...");
   }
 
 }
