@@ -17,7 +17,8 @@ export class ItemCreateGroupPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, private _FB: FormBuilder) {
     this.form = this._FB.group({
-      groupName: ['', Validators.required],
+      // groupName: ['', Validators.required],
+      groupName: [''],
       name: [''],
       technologies: this._FB.array([
          this.initTechnologyFields()
@@ -105,6 +106,7 @@ export class ItemCreateGroupPage {
   done() {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
+    console.log("Done button clicked...");
   }
 
 }

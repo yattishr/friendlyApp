@@ -32,8 +32,8 @@ export class ItemCreateEventSportsRecPage {
 
 
   /* Launch Sports and Rec Detail page. */
-  goTo(dataParam: dataParam) {
-    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecDetailPage', { dataParam: dataParam });
+  goTo(dataParam) {
+    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecDetailPage', { dataParam });
     addModal.present();
   }
   /* Launch Sports and Rec Detail page. */
