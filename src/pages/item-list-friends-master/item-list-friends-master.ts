@@ -53,5 +53,5 @@ export class ItemListFriendsMasterPage {
   done() {
     if (!this.form.valid) { return; }
     this.viewCtrl.dismiss(this.form.value);
-  }  
+  }
 }

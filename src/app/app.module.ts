@@ -26,6 +26,7 @@ import { ListMasterFriendsPageModule } from '../pages/list-master-friends/list-m
 import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 import { ItemCreateEventDrinksDiningPageModule } from '../pages/item-create-event-drinks-dining/item-create-event-drinks-dining.module';
 
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {

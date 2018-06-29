@@ -1,4 +1,4 @@
-<ion-content scroll="false"  class="bg">
+<ion-content scroll="false">
   <div class="splash-bg"></div>
   <div class="splash-info">
     <div class="splash-logo"></div>

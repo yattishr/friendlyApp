@@ -9,9 +9,7 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
-    "ionic:watch:before": "node src/app/script.js",
-    "ionic:build:before": "node src/app/script.js"
+    "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
     "@angular/animations": "5.2.10",
@@ -37,7 +35,7 @@
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "^1.3.3",
-    "firebase": "^5.1.0",
+    "firebase": "^5.2.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
