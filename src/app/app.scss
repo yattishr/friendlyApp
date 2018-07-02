@@ -14,3 +14,11 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// remove the scroll-bar on the RHS of the screen. Y.R added: 02-Jul-2018
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+// set the bakground color of the search-bar
+$searchbar-ios-background-color: rgba(0, 0, 0, .2);

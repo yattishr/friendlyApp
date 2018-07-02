@@ -2,6 +2,9 @@
 
   <ion-navbar color="headercolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+    <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-navbar>
 
 </ion-header>
@@ -17,7 +20,7 @@
       </ion-fab-list>
   </ion-fab>
 
-  <ion-list transparent>
+  <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
