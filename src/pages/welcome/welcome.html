@@ -7,7 +7,11 @@
     </div>
   </div>
   <div padding>
-    <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+    <button ion-button icon-start outline block (click)="signup()">
+      <ion-icon name="ios-open-outline"></ion-icon>{{ 'SIGNUP' | translate }}
+    </button>
+    <button ion-button icon-start outline block (click)="login()" class="login">
+      <ion-icon name="md-log-in"></ion-icon>{{ 'LOGIN' | translate }}
+    </button>
   </div>
 </ion-content>

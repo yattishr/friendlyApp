@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the ItemCreateEventSportsRecDetailPage page.
@@ -14,9 +15,12 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'item-create-event-sports-rec-detail.html',
 })
 export class ItemCreateEventSportsRecDetailPage {
+  myVal: string;
+  isReadyToSave: boolean;
 
-  constructor(public navCtrl: NavController, public _navParams: NavParams, public viewCtrl: ViewController) {
-    console.log("this is my parameter: ", _navParams.get('dataParam'));
+  constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController) {
+    this.myVal = params.get('dataParam');
+    console.log('This is MY Data value: ', params.get('dataParam'));
   }
 
   ionViewDidLoad() {

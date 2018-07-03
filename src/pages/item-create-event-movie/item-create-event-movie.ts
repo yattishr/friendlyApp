@@ -51,7 +51,7 @@ export class ItemCreateEventMoviePage {
     console.log('ionViewDidLoad ItemCreateEventMoviePage');
   }
 
-  /* Add new Group Item*/
+  /* Show Group Selection Modal page */
   itemGroupSelect() {
     let addModal = this.modalCtrl.create('ListMasterGroupsModalPage');
     addModal.onDidDismiss(item => {
@@ -61,11 +61,12 @@ export class ItemCreateEventMoviePage {
     })
     addModal.present();
   }
-  /* Add new Group Item*/
+  /* Show Group Selection Modal page */
 
   createItem() {
     console.log("create item function triggered...");
-  }  
+    this.viewCtrl.dismiss(this.form.value);
+  }
 
   /**
    * The user cancelled, so we dismiss without sending data back.
