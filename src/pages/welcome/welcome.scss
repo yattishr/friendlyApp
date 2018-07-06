@@ -2,11 +2,11 @@ page-welcome {
   .splash-bg {
     position: relative;
     // background: url('../assets/img/splashbg.png') no-repeat transparent;
+    background: url('../assets/img/background/backgroundimg.jpg') no-repeat transparent;
     background-size: cover;
-    height: 45%;
+    height: 100%; // was 45%;
     z-index: 1;
     background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
   }
 
   @keyframes animatedBackground {
@@ -22,7 +22,6 @@ page-welcome {
   }
   .splash-logo {
     margin: auto;
-    // background: url('../assets/img/appicon.png') repeat transparent;
     background: url('../assets/img/friendly_logo5.png') repeat transparent;
     background-size: 100%;
     width: 128px; // was 128px
@@ -33,6 +32,7 @@ page-welcome {
     font-weight: bold;
     max-width: 80%;
     margin: auto;
+    text-align: center;
   }
   button.login {
     margin-top: 25px;
@@ -46,8 +46,18 @@ page-welcome {
   }
 
   .bg{
-    // background: linear-gradient(to bottom, #2980b9 0%, #ff6b6b 100%);
     background: linear-gradient(to bottom, #2bc0e4 0%, #eaecc6 100%);
+    // background: url('../assets/img/background/backgroundimg.jpg');
+    //  width: 100vw;
+    //  height: 100vh;
+    //
+    //  -webkit-filter: blur(10px);
+    //  -moz-filter: blur(10px);
+    //  -o-filter: blur(10px);
+    //  -ms-filter: blur(10px);
+    //  filter: blur(10px);
   }
+
+
 
 }

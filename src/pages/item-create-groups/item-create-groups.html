@@ -65,17 +65,6 @@
                             formControlName="name"></ion-input>
                       </ion-item>
 
-                      <!-- Allow generated input field to be removed -->
-                      <!--span
-                         float-right
-                         ion-button
-                         icon-left
-                         clear
-                         *ngIf="form.controls.technologies.length > 1"
-                         (click)="removeInputField(i)">
-                         <ion-icon name="close"></ion-icon>
-                         Remove Friend
-                      </span-->
                       <span float-right
                       *ngIf="form.controls.technologies.length > 1">
                         <ion-chip (click)="removeInputField(i)">
@@ -87,16 +76,6 @@
                 </section>
              </div>
 
-             <!-- Allow new input field to be generated/added -->
-             <!--span
-                ion-button
-                float-left
-                icon-left
-                clear
-                (click)="addNewInputField()">
-                   <ion-icon name="add"></ion-icon>
-                   Add Friend
-             </span-->
              <span float-left>
                <ion-chip (click)="addNewInputField()">
                  <ion-icon name="add-circle" color="secondary"></ion-icon>
@@ -105,14 +84,5 @@
              </span>
 
          </ion-list>
-         <!-- Only allow form to be submitted IF validation criteria for
-                  input fields has been successfully passed -->
-             <!--button
-             ion-button
-             block
-             margin-top
-             color="primary"
-             text-center
-             [disabled]="!form.valid">Submit</button-->
        </form>
 </ion-content>
