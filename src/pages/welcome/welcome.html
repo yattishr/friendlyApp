@@ -1,17 +1,19 @@
 <ion-content scroll="false" class="bg">
   <div class="splash-bg">
-    <div class="splash-logo"></div>
-    <div class="splash-intro">
-      {{ 'APP_TITLE_TEXT' | translate }}
-    </div>
+    <ion-card class="card-content">
+      <div class="splash-logo"></div>
+      <div class="splash-intro">
+        {{ 'APP_TITLE_TEXT' | translate }}
+      </div>
 
-  <div padding>
-    <button ion-button icon-start outline block (click)="signup()">
-      <ion-icon name="ios-open-outline"></ion-icon>{{ 'SIGNUP' | translate }}
-    </button>
-    <button ion-button icon-start outline block (click)="login()" class="login">
-      <ion-icon name="md-log-in"></ion-icon>{{ 'LOGIN' | translate }}
-    </button>
-  </div>
+      <div padding>
+        <button ion-button icon-start outline block (click)="signup()">
+          <ion-icon name="ios-open-outline"></ion-icon>{{ 'SIGNUP' | translate }}
+        </button>
+        <button ion-button icon-start outline block (click)="login()" class="login">
+          <ion-icon name="md-log-in"></ion-icon>{{ 'LOGIN' | translate }}
+        </button>
+      </div>
+    </ion-card>
 </div>
 </ion-content>
