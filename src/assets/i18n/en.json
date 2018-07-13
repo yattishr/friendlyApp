@@ -25,8 +25,8 @@
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the friend.Ly App :-)",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>friend.Ly App</b> is a fully-featured social-sharing Events App to help you maintain and keep track of your busy social life.",
+  "TUTORIAL_SLIDE1_TITLE": "<strong>friend.Ly</strong>",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<strong>friend.Ly</strong> is a social-sharing Events App to help you manage and keep track of your busy social life.",
 
   "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",

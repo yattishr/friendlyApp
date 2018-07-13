@@ -19,17 +19,15 @@ import { Items } from '../../providers';
 export class ItemCreateEventMusicConcertPage {
 
   currentItems: Item[];
-
   isReadyToSave: boolean;
-
   item: any;
-
   form: FormGroup;
+  segment: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController, public items: Items) {
 
+    this.segment = "ConcertInfo"
     this.currentItems = this.items.query();
-
     this.form = formBuilder.group({
       concertName: ['', Validators.required],
       concertDate: [''],
@@ -64,6 +62,10 @@ export class ItemCreateEventMusicConcertPage {
 
 createItem() {
   console.log("create item function triggered...");
+}
+
+scan() {
+  console.log("scanning QR code...");
 }
 
 

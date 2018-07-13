@@ -31,57 +31,64 @@
 
 <ion-content padding>
   <div padding>
-    <ion-segment [(ngModel)]="segment">
+    <ion-segment [(ngModel)]="musicConcert">
       <ion-segment-button value="ConcertInfo">
-        Concert Info
+        Kittens
       </ion-segment-button>
       <ion-segment-button value="ScanQR">
-        Scan QR
+        Puppies
       </ion-segment-button>
     </ion-segment>
   </div>
 
-  <div [ngSwitch]="segment">
+  <div [ngSwitch]="pet">
     <ion-list *ngSwitchCase="'ConcertInfo'">
-      <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
-        <ion-list>
-          <ion-item>
-            <ion-label fixed>Concert</ion-label>
-            <ion-input type="text" formControlName="concertName"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label fixed>Date</ion-label>
-            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="concertDate"></ion-datetime>
-          </ion-item>
-
-          <ion-item>
-            <ion-label fixed>Start Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="concertStartTime"></ion-datetime>
-          </ion-item>
-
-          <ion-item>
-            <ion-label fixed>Venue</ion-label>
-            <ion-input type="text" formControlName="concertVenue"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label fixed>Meetup Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
-          </ion-item>
-        </ion-list>
-      </form>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="src/assets/img/speakers/bear.jpg">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'ScanQR'">
       <ion-item>
-        <h1>
-          <button ion-button color="dark" full round (click)="scan()">Begin Scan</button>
-        </h1>
+        <ion-thumbnail item-start>
+          <img src="src/assets/img/speakers/bear.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
       </ion-item>
     </ion-list>
   </div>
 
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Music Concert</ion-label>
+        <ion-input type="text" formControlName="concertName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concert Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="concertDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concert Start Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="concertStartTime"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concert Venue</ion-label>
+        <ion-input type="text" formControlName="concertVenue"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Meetup Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+  </form>
   <ion-item-divider color="dividercolor">
     <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
     <span style="display: inline-block;" item-end>Invite Friends</span>
