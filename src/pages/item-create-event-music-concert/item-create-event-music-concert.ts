@@ -57,7 +57,19 @@ export class ItemCreateEventMusicConcertPage {
     })
     addModal.present();
   }
-  /* Add new Group Item*/
+  /* Add new Group Item */
+
+  /* Open the QR Scan Modal */
+  itemQRScan() {
+    let addModal = this.modalCtrl.create('ItemScanQrCodePage');
+    addModal.onDidDismiss(item => {
+      if (item) {
+        this.items.add(item);
+      }
+    })
+    addModal.present();
+  }
+  /* Open the QR Scan Modal */
 
 
 createItem() {

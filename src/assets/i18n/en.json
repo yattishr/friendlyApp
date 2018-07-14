@@ -69,6 +69,7 @@
   "ITEM_DRINKS_DINING_EVENT": "Drinks and Dining",
   "ITEM_SPORTS_RECREATION_EVENT": "Sports and Recreation",
   "ITEM_MUSIC_CONCERT_EVENT": "Music Concert",
+  "ITEM_SCAN_QR": "Scan QR Code",  
 
   "ITEM_EVENT_MOVIE_NAME_PLACEHOLDER": "What Movie",
   "ITEM_EVENT_MOVIE_DATE_PLACEHOLDER": "When",

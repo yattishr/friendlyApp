@@ -29,13 +29,13 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bg">
   <div padding>
     <ion-segment [(ngModel)]="segment">
       <ion-segment-button value="ConcertInfo">
         Concert Info
       </ion-segment-button>
-      <ion-segment-button value="ScanQR">
+      <ion-segment-button value="ScanQR" (ionSelect)="itemQRScan()">
         Scan QR
       </ion-segment-button>
     </ion-segment>
@@ -46,44 +46,40 @@
       <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
         <ion-list>
           <ion-item>
-            <ion-label fixed>Concert</ion-label>
+            <ion-label stacked>Concert</ion-label>
             <ion-input type="text" formControlName="concertName"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label fixed>Date</ion-label>
+            <ion-label stacked>Date</ion-label>
             <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="concertDate"></ion-datetime>
           </ion-item>
 
           <ion-item>
-            <ion-label fixed>Start Time</ion-label>
+            <ion-label stacked>Start Time</ion-label>
             <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="concertStartTime"></ion-datetime>
           </ion-item>
 
           <ion-item>
-            <ion-label fixed>Venue</ion-label>
+            <ion-label stacked>Venue</ion-label>
             <ion-input type="text" formControlName="concertVenue"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label fixed>Meetup Time</ion-label>
+            <ion-label stacked>Meetup Time</ion-label>
             <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
           </ion-item>
+
+          <ion-item-group>
+            <ion-item-divider color="dividercolor">
+              <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
+              <span style="display: inline-block;" item-end>Invite Friends</span>
+            </ion-item-divider>
+          </ion-item-group>
         </ion-list>
       </form>
     </ion-list>
-
-    <ion-list *ngSwitchCase="'ScanQR'">
-      <ion-item>
-        <h1>
-          <button ion-button color="dark" full round (click)="scan()">Begin Scan</button>
-        </h1>
-      </ion-item>
-    </ion-list>
   </div>
 
-  <ion-item-divider color="dividercolor">
-    <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
-    <span style="display: inline-block;" item-end>Invite Friends</span>
-  </ion-item-divider>
+
 </ion-content>

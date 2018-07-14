@@ -8,6 +8,9 @@ import { IonicStorageModule, Storage } from '@ionic/storage';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Toast } from '@ionic-native/toast';
+import { HttpModule } from '@angular/http';
 
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
@@ -25,6 +28,7 @@ import { ListMasterGroupsPageModule } from '../pages/list-master-groups/list-mas
 import { ListMasterFriendsPageModule } from '../pages/list-master-friends/list-master-friends.module';
 import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 import { ItemCreateEventDrinksDiningPageModule } from '../pages/item-create-event-drinks-dining/item-create-event-drinks-dining.module';
+import { DataServiceProvider } from '../providers/data-service/data-service';
 
 
 // The translate loader needs to know where to load i18n files
@@ -70,6 +74,7 @@ export function provideSettings(storage: Storage) {
     ListMasterFriendsPageModule,
     ListMasterInvitesPageModule,
     ItemCreateEventDrinksDiningPageModule,
+    HttpModule    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -90,7 +95,10 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    BarcodeScanner,
+    Toast,
+    DataServiceProvider
   ]
 })
 export class AppModule { }

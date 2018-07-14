@@ -1,0 +1,23 @@
+[
+  {
+    "plu":"01234567895",
+    "name":"Katy Perry WITNESS: The Tour",
+    "price":76,
+    "desc":"Katy Perry announcess she will be performing in South Africa for the very first time as part of her WITNESS: The Tour.",
+    "datetime": "Sat 21 Jul 2018 07:15PM"
+  },
+  {
+    "plu":"01234567898",
+    "name":"Daughtry",
+    "price":200,
+    "desc":"As the frontman for the band bearing his name, Daughtry has become one of the most visible and consistent rock & roll torchbearers of the 21st Century.",
+    "datetime": "Sat 27 Oct 2018 08:00PM"
+  },
+  {
+    "plu":"01234567894",
+    "name":"Guns N Roses",
+    "price":200,
+    "desc":"For the first time in the history of Guns N` Roses, the international rock icons will perform one show only in South Africa at the world renowned FNB Stadium in Johannesburg on 29th November 2018.",
+    "datetime": "Sat 29 Nov 2018 07:00PM"
+  }
+]
