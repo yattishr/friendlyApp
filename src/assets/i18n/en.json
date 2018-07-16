@@ -26,7 +26,7 @@
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
   "TUTORIAL_SLIDE1_TITLE": "<strong>friend.Ly</strong>",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<strong>friend.Ly</strong> is a social-sharing Events App to help you manage and keep track of your busy social life.",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<strong>friend.Ly</strong> is a social-sharing Events App to help you manage and maintain your busy social life.",
 
   "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
@@ -69,7 +69,7 @@
   "ITEM_DRINKS_DINING_EVENT": "Drinks and Dining",
   "ITEM_SPORTS_RECREATION_EVENT": "Sports and Recreation",
   "ITEM_MUSIC_CONCERT_EVENT": "Music Concert",
-  "ITEM_SCAN_QR": "Scan QR Code",  
+  "ITEM_SCAN_QR": "Scan QR Code",
 
   "ITEM_EVENT_MOVIE_NAME_PLACEHOLDER": "What Movie",
   "ITEM_EVENT_MOVIE_DATE_PLACEHOLDER": "When",

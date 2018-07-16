@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 /**
  * Generated class for the ItemCreateEventSportsRecDetailPage page.
@@ -17,15 +18,30 @@ import { ModalController } from 'ionic-angular';
 export class ItemCreateEventSportsRecDetailPage {
   myVal: string;
   isReadyToSave: boolean;
+  form: FormGroup;
 
-  constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController) {
     this.myVal = params.get('dataParam');
     console.log('This is MY Data value: ', params.get('dataParam'));
+
+    this.form = formBuilder.group({
+      activityVenueName: ['', Validators.required],
+      activityDate: [''],
+      activityTime: [''],
+      activityMeetUpTime: ['']
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemCreateEventSportsRecDetailPage');
   }
+
+  /* Show Group Selection Modal page */
+  itemGroupSelect() {
+    let addModal = this.modalCtrl.create('ListMasterGroupsModalPage');
+    addModal.present();
+  }
+  /* Show Group Selection Modal page */
 
   cancel() {
     this.viewCtrl.dismiss();
@@ -40,5 +56,10 @@ export class ItemCreateEventSportsRecDetailPage {
     // this.viewCtrl.dismiss(this.form.value);
     console.log("Done button clicked...");
   }
+
+  createItem() {
+    console.log("Creating activity item...");
+  }
+
 
 }

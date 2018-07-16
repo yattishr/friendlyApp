@@ -31,8 +31,39 @@
 
 <ion-content padding class="bg">
   <ion-card>
-        <ion-card-header background-color="headercolor">
+        <ion-card-header>
           Activity | {{ myVal }}
         </ion-card-header>
   </ion-card>
+
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Venue</ion-label>
+        <ion-input type="text" formControlName="activityVenueName" clearInput="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="activityDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myActivityTime" formControlName="activityTime"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Meetup Time</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myMeetupTime" formControlName="activityMeetUpTime"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <section>
+        <ion-item-divider color="dividercolor">
+          <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
+          <span style="display: inline-block;" item-end>Invite Friends</span>
+        </ion-item-divider>
+    </section>
+  </form>
+
 </ion-content>

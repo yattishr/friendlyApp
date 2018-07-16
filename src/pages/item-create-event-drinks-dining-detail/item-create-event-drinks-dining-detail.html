@@ -40,7 +40,7 @@
     <ion-list>
       <ion-item>
         <ion-label stacked>Venue</ion-label>
-        <ion-input type="text" formControlName="diningVenueName"></ion-input>
+        <ion-input type="text" formControlName="diningVenueName" clearInput="true"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -53,12 +53,12 @@
         <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="diningMeetUpTime"></ion-datetime>
       </ion-item>
     </ion-list>
-    <ion-item-group>
+    <section>
         <ion-item-divider color="dividercolor">
           <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
           <span style="display: inline-block;" item-end>Invite Friends</span>
         </ion-item-divider>
-    </ion-item-group>
+    </section>
   </form>
 
 </ion-content>

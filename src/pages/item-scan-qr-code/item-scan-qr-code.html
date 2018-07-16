@@ -28,29 +28,25 @@
 
 
 <ion-content padding class="bg">
-  <ion-item>
-    <ion-card *ngIf="productFound">
-      <ion-card-header>
-        <h2>Event Information</h2>
-      </ion-card-header>
-      <ion-card-content>
-        <ul>
-          <li><strong>{{selectedProduct.name}}</strong></li>
-          <li>{{selectedProduct.desc}}</li>
-          <li>Price: $ {{selectedProduct.price}}</li>
-          <li>{{selectedProduct.datetime}}</li>
-          <li>{{selectedProduct.plu}}</li>
-        </ul>
-      </ion-card-content>
-    </ion-card>
 
-    <h1>
-      <button ion-button color="dark" full round (click)="scan()">Begin Scan</button>
-    </h1>
-  </ion-item>
-  <ion-item>
-    <h1>
-      <button ion-button color="secondary" full round (click)="makeBooking()">Make Booking</button>
-    </h1>
-  </ion-item>
+  <div padding>
+    <button ion-button color="primary" outline block (click)="scan()">Begin Scan</button>
+    <button ion-button color="secondary" outline block (click)="makeBooking()">Make Booking</button>
+  </div>
+
+  <ion-card *ngIf="productFound">
+    <ion-card-header>
+      <h2>Event Information</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li><strong>{{selectedProduct.name}}</strong></li>
+        <li>{{selectedProduct.desc}}</li>
+        <li>Price: $ {{selectedProduct.price}}</li>
+        <li>{{selectedProduct.datetime}}</li>
+        <li>{{selectedProduct.plu}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

@@ -38,7 +38,7 @@
         <ion-list>
           <ion-item>
             <ion-label stacked>Movie Title</ion-label>
-            <ion-input type="text" formControlName="movieName"></ion-input>
+            <ion-input type="text" formControlName="movieName" clearInput="true"></ion-input>
           </ion-item>
 
           <ion-item>
@@ -53,7 +53,7 @@
 
           <ion-item>
             <ion-label stacked>Cinema</ion-label>
-            <ion-input type="text" formControlName="movieCinema"></ion-input>
+            <ion-input type="text" formControlName="movieCinema" clearInput="true"></ion-input>
           </ion-item>
 
           <ion-item>
@@ -63,10 +63,10 @@
         </ion-list>
       </form>
 
-  <ion-item-group>
-    <ion-item-divider color="dividercolor">
+<section>
+    <ion-item-divider full color="dividercolor">
       <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
       <span style="display: inline-block;" item-end>Invite Friends</span>
     </ion-item-divider>
-  </ion-item-group>
+</section>
 </ion-content>

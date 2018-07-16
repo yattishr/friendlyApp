@@ -47,7 +47,7 @@
         <ion-list>
           <ion-item>
             <ion-label stacked>Concert</ion-label>
-            <ion-input type="text" formControlName="concertName"></ion-input>
+            <ion-input type="text" formControlName="concertName" clearInput="true"></ion-input>
           </ion-item>
 
           <ion-item>
@@ -62,7 +62,7 @@
 
           <ion-item>
             <ion-label stacked>Venue</ion-label>
-            <ion-input type="text" formControlName="concertVenue"></ion-input>
+            <ion-input type="text" formControlName="concertVenue" clearInput="true"></ion-input>
           </ion-item>
 
           <ion-item>
@@ -70,13 +70,13 @@
             <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="concertMeetUpTime"></ion-datetime>
           </ion-item>
 
-          <ion-item-group>
-            <ion-item-divider color="dividercolor">
-              <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
-              <span style="display: inline-block;" item-end>Invite Friends</span>
-            </ion-item-divider>
-          </ion-item-group>
         </ion-list>
+
+        <ion-item-divider color="dividercolor">
+          <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
+          <span style="display: inline-block;" item-end>Invite Friends</span>
+        </ion-item-divider>
+
       </form>
     </ion-list>
   </div>
