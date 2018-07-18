@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="headercolor">
+  <ion-navbar color="dark">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_SPORTS_RECREATION_EVENT' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
@@ -29,13 +29,8 @@
 </ion-header>
 
 
-<ion-content padding class="bg">
-  <ion-card>
-        <ion-card-header>
-          Activity | {{ myVal }}
-        </ion-card-header>
-  </ion-card>
-
+<ion-content padding>
+  <h6 text-center>Activity | {{ myVal }}</h6>
   <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
     <ion-list>
       <ion-item>
@@ -58,12 +53,7 @@
         <ion-datetime displayFormat="HH:mm" [(ngModel)]="myMeetupTime" formControlName="activityMeetUpTime"></ion-datetime>
       </ion-item>
     </ion-list>
-    <section>
-        <ion-item-divider color="dividercolor">
-          <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
-          <span style="display: inline-block;" item-end>Invite Friends</span>
-        </ion-item-divider>
-    </section>
+    <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
   </form>
 
 </ion-content>

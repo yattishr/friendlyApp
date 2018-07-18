@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="headercolor">
+  <ion-navbar color="dark">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_WATCH_MOVIE_EVENT' | translate }}</ion-title>
 
     <ion-buttons start>
@@ -31,7 +31,7 @@
 </ion-header>
 
 
-<ion-content padding class="bg">
+<ion-content padding>
 
       <!-- Add card content here! -->
       <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
@@ -62,11 +62,5 @@
           </ion-item>
         </ion-list>
       </form>
-
-<section>
-    <ion-item-divider full color="dividercolor">
-      <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
-      <span style="display: inline-block;" item-end>Invite Friends</span>
-    </ion-item-divider>
-</section>
+<button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 </ion-content>

@@ -1,6 +1,24 @@
 page-item-create-event-drinks-dining-detail {
-  .bg{
-    // background: linear-gradient(to bottom, #2980b9 0%, #ff6b6b 100%);
-    background: linear-gradient(to bottom, #1f1c2c 0%, #928dab 100%);
+  ion-content {
+    .scroll-content {
+        background-color: map-get($colors, danger);
+    }
+  } 
+
+  .item {
+    background-color: map-get($colors, danger);
+    color: white;
+    font-weight: bold;    
   }
+
+  ion-label {
+    color: white;
+    font-weight: bold;
+  }
+
+  h6 {
+    color: white;
+    font-weight: bold;
+  }
+
 }

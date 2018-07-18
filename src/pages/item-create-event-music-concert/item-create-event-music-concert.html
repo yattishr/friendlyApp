@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="headercolor">
+  <ion-navbar color="dark">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_MUSIC_CONCERT_EVENT' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
@@ -29,7 +29,7 @@
 </ion-header>
 
 
-<ion-content padding class="bg">
+<ion-content padding>
   <div padding>
     <ion-segment [(ngModel)]="segment">
       <ion-segment-button value="ConcertInfo">
@@ -46,22 +46,22 @@
       <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
         <ion-list>
           <ion-item>
-            <ion-label stacked>Concert</ion-label>
+            <ion-label stacked>What Concert</ion-label>
             <ion-input type="text" formControlName="concertName" clearInput="true"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label stacked>Date</ion-label>
+            <ion-label stacked>Concert Date</ion-label>
             <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="concertDate"></ion-datetime>
           </ion-item>
 
           <ion-item>
-            <ion-label stacked>Start Time</ion-label>
+            <ion-label stacked>Concert Start Time</ion-label>
             <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="concertStartTime"></ion-datetime>
           </ion-item>
 
           <ion-item>
-            <ion-label stacked>Venue</ion-label>
+            <ion-label stacked>Concert Venue</ion-label>
             <ion-input type="text" formControlName="concertVenue" clearInput="true"></ion-input>
           </ion-item>
 
@@ -72,10 +72,7 @@
 
         </ion-list>
 
-        <ion-item-divider color="dividercolor">
-          <span style="display: inline-block;" item-start><ion-icon name="add-circle" (click)="itemGroupSelect()"></ion-icon></span>
-          <span style="display: inline-block;" item-end>Invite Friends</span>
-        </ion-item-divider>
+        <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 
       </form>
     </ion-list>

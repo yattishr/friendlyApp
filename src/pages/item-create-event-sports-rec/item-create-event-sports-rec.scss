@@ -1,3 +1,16 @@
 page-item-create-event-sports-rec {
-
+    ion-content {
+        .scroll-content {
+            background-color: map-get($colors, danger);
+        }
+      } 
+    
+      .item {
+        background-color: map-get($colors, danger);
+      }
+    
+      ion-label {
+        color: white;
+        font-weight: bold;
+      }
 }

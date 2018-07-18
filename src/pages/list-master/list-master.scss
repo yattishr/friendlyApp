@@ -1,6 +1,27 @@
 page-list-master {
-  .bg{
-    // background: linear-gradient(to bottom, #2980b9 0%, #ff6b6b 100%);
-    background: linear-gradient(to bottom, #0c2461 0%, #ffffff 100%);
+  ion-content {
+    .scroll-content {
+        background-color: map-get($colors, danger);
+    }
+
+    ion-note {
+      color: white;
+      font-weight: bold;    
+    }
+
+    ion-label {
+      color: white;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+      font-weight: bold;    
+    }    
+
+  } 
+
+  .item {
+    background-color: map-get($colors, danger);
   }
 }

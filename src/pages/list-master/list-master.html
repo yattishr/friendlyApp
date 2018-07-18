@@ -1,6 +1,6 @@
 <ion-header no-border>
 
-  <ion-navbar color="headercolor">
+  <ion-navbar color="dark">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
     <button ion-button menuToggle>
          <ion-icon name="menu"></ion-icon>
@@ -9,13 +9,13 @@
 
 </ion-header>
 
-<ion-content class="">
+<ion-content>
   <ion-fab top right edge>
-      <button ion-fab mini color="danger"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab mini color="light"><ion-icon name="add"></ion-icon></button>
       <ion-fab-list>
         <button ion-fab color="primary" (click)="navigateToEventsPage('ItemCreateEventMoviePage');"><ion-icon name="videocam"></ion-icon></button>
         <button ion-fab color="favorite" (click)="navigateToEventsPage('ItemCreateEventDrinksDiningPage');"><ion-icon name="md-restaurant"></ion-icon></button>
-        <button ion-fab color="danger" (click)="navigateToEventsPage('ItemCreateEventSportsRecPage');"><ion-icon name="american-football"></ion-icon></button>
+        <button ion-fab color="light" (click)="navigateToEventsPage('ItemCreateEventSportsRecPage');"><ion-icon name="american-football"></ion-icon></button>
         <button ion-fab color="primary" (click)="navigateToEventsPage('ItemCreateEventMusicConcertPage');"><ion-icon name="ios-musical-notes"></ion-icon></button>
       </ion-fab-list>
   </ion-fab>
@@ -27,12 +27,12 @@
           <img [src]="item.profilePic" />
         </ion-avatar>
         <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
+        <p class="about">{{item.about}}</p>
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 
       <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
+        <button ion-button color="primary" (click)="deleteItem(item)">
           {{ 'DELETE_BUTTON' | translate }}
         </button>
       </ion-item-options>

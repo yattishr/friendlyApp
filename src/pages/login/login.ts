@@ -47,4 +47,10 @@ export class LoginPage {
       toast.present();
     });
   }
+
+  gotoSignup() {
+    this.navCtrl.push('SignupPage');
+    console.log("Signup page button clicked...");
+  }
+
 }
