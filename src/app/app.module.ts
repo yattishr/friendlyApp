@@ -29,7 +29,19 @@ import { ListMasterFriendsPageModule } from '../pages/list-master-friends/list-m
 import { ListMasterInvitesPageModule } from '../pages/list-master-invites/list-master-invites.module';
 import { ItemCreateEventDrinksDiningPageModule } from '../pages/item-create-event-drinks-dining/item-create-event-drinks-dining.module';
 import { DataServiceProvider } from '../providers/data-service/data-service';
+import firebase from 'firebase';
 
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAvYp3FQu8P43J0ac6n68I9wz15yOuwXGQ",
+  authDomain: "friendly-app-1a2b4.firebaseapp.com",
+  databaseURL: "https://friendly-app-1a2b4.firebaseio.com",
+  projectId: "friendly-app-1a2b4",
+  storageBucket: "friendly-app-1a2b4.appspot.com",
+  messagingSenderId: "384456700160"
+};
+firebase.initializeApp(config);
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.

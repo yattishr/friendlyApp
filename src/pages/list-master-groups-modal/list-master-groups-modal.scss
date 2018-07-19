@@ -1,17 +1,12 @@
 page-list-master-groups-modal {
   ion-content {
     .scroll-content {
-        background-color: map-get($colors, danger);
+        background-color: map-get($colors, backcolor);
     }
   } 
 
   .item {
-    background-color: map-get($colors, danger);
-  }
-
-  ion-label {
-    color: white;
-    font-weight: bold;
+    background-color: map-get($colors, backcolor);
   }
 
   h6 {

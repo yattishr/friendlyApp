@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="dark">
+  <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_DRINKS_DINING_EVENT' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
@@ -31,24 +31,23 @@
 <ion-content padding>
 
   <h6 text-center>Drinks and Dining | {{ myVal }}</h6>
-  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
-    <ion-list>
-      <ion-item>
+  <ion-grid style="width: 80%">
+
+      <ion-row class="rowStyle">
         <ion-label stacked>Venue</ion-label>
-        <ion-input type="text" formControlName="diningVenueName" clearInput="true"></ion-input>
-      </ion-item>
+        <ion-input type="text" [(ngModel)]="diningVenueName" clearInput="true"></ion-input>
+      </ion-row>
 
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="diningDate"></ion-datetime>
-      </ion-item>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="diningDate"></ion-datetime>
+      </ion-row>
 
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Meetup Time</ion-label>
-        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="diningMeetUpTime"></ion-datetime>
-      </ion-item>
-    </ion-list>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="diningMeetUpTime"></ion-datetime>
+      </ion-row>
     <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
-  </form>
 
+</ion-grid>
 </ion-content>

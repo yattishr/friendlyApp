@@ -1,18 +1,14 @@
 page-item-create-event-sports-rec-detail {
   ion-content {
     .scroll-content {
-        background-color: map-get($colors, danger);
+        background-color: map-get($colors, backcolor);
     }
   } 
 
   .item {
-    background-color: map-get($colors, danger);
+    background-color: map-get($colors, backcolor);
   }
 
-  ion-label {
-    color: white;
-    font-weight: bold;
-  }
 
   h6 {
     color: white;

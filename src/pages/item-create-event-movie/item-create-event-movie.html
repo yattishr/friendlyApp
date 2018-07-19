@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="dark">
+  <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_WATCH_MOVIE_EVENT' | translate }}</ion-title>
 
     <ion-buttons start>
@@ -32,35 +32,31 @@
 
 
 <ion-content padding>
-
-      <!-- Add card content here! -->
-      <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
-        <ion-list>
-          <ion-item>
+  <ion-grid style="width: 80%">
+          <ion-row class="rowStyle">
             <ion-label stacked>Movie Title</ion-label>
-            <ion-input type="text" formControlName="movieName" clearInput="true"></ion-input>
-          </ion-item>
+            <ion-input type="text" [(ngModel)]="movieName" clearInput="true"></ion-input>
+          </ion-row>
 
-          <ion-item>
+          <ion-row class="rowStyle">
             <ion-label stacked>Movie Date</ion-label>
-            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="movieDate"></ion-datetime>
-          </ion-item>
+            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate"></ion-datetime>
+          </ion-row>
 
-          <ion-item>
+          <ion-row class="rowStyle">
             <ion-label stacked>Start Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate" formControlName="movieStartTime"></ion-datetime>
-          </ion-item>
+            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1"></ion-datetime>
+          </ion-row>
 
-          <ion-item>
+          <ion-row class="rowStyle">
             <ion-label stacked>Cinema</ion-label>
-            <ion-input type="text" formControlName="movieCinema" clearInput="true"></ion-input>
-          </ion-item>
+            <ion-input type="text" [(ngModel)]="movieCinema" clearInput="true"></ion-input>
+          </ion-row>
 
-          <ion-item>
+          <ion-row class="rowStyle">
             <ion-label stacked>Meetup Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" formControlName="movieMeetUpTime"></ion-datetime>
-          </ion-item>
-        </ion-list>
-      </form>
-<button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
+            <ion-datetime displayFormat="HH:mm" [(ngModel)]="myDate1" [(ngModel)]="movieMeetUpTime"></ion-datetime>
+          </ion-row>
+  <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
+</ion-grid>
 </ion-content>

@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="dark">
+  <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_MUSIC_CONCERT_EVENT' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
@@ -31,7 +31,7 @@
 
 <ion-content padding>
   <div padding>
-    <ion-segment [(ngModel)]="segment">
+    <ion-segment [(ngModel)]="segment" color="segmentbutton">
       <ion-segment-button value="ConcertInfo">
         Concert Info
       </ion-segment-button>

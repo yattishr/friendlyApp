@@ -1,24 +1,29 @@
 page-item-create-event-drinks-dining-detail {
   ion-content {
     .scroll-content {
-        background-color: map-get($colors, danger);
+        background-color: map-get($colors, backcolor);
     }
   } 
 
   .item {
-    background-color: map-get($colors, danger);
-    color: white;
-    font-weight: bold;    
-  }
-
-  ion-label {
-    color: white;
-    font-weight: bold;
+    background-color: map-get($colors, backcolor);  
   }
 
   h6 {
     color: white;
     font-weight: bold;
   }
+
+  .rowStyle{
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+
+    ion-icon{
+        margin-top: 13px;
+        margin-right: 10px;
+    }        
+  }  
 
 }

@@ -1,16 +1,24 @@
 page-item-create-event-music-concert {
   ion-content {
     .scroll-content {
-        background-color: map-get($colors, danger);
+        background-color: map-get($colors, backcolor);
     }
 }
 
   .item {
-    background-color: map-get($colors, danger);
+    background-color: map-get($colors, backcolor);
   }
 
-  ion-label {
-    color: white;
-    font-weight: bold;
-  }
+  .rowStyle{
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+
+    ion-icon{
+        margin-top: 13px;
+        margin-right: 10px;
+    }        
+}
+
 }

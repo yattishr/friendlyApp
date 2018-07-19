@@ -34,11 +34,13 @@ $colors: (
   google:     #dc4a38,
   vimeo:      #23b6ea,
   facebook:   #3b5998,
-  tabcolor:   #488aff,
+  tabcolor:   #222,
   headercolor: #488aff,
   dividercolor: #488aff,
   searchbarcolor:  #f4f4f4,
-  searchbarbordercolor:  #488aff
+  searchbarbordercolor:  #488aff,
+  backcolor: #32db64,
+  segmentbutton: #222
 );
 
 
@@ -47,14 +49,19 @@ $colors: (
 // iOS only Sass variables can go here
 $searchbar-ios-input-background-color: color($colors, searchbarcolor);
 $searchbar-ios-border-color: color($colors, searchbarbordercolor);
-
+$label-ios-text-color: color($colors, light);
+$list-ios-header-color: color($colors, dark); 
+$list-ios-header-font-size: 1.2rem;
+$segment-button-ios-background-color: color($colors, light);
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 $searchbar-md-input-background-color: color($colors, searchbarcolor);
 $searchbar-md-border-color: color($colors, searchbarbordercolor);
-
+$label-md-text-color: color($colors, light);
+$list-md-header-color: color($colors, dark);
+$segment-button-md-background-color: color($colors, light);
 
 // App Windows Variables
 // --------------------------------------------------
