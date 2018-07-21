@@ -20,37 +20,22 @@
       </ion-fab-list>
   </ion-fab>
 
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems" color="secondary">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img [src]="item.profilePic" />
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p class="about">{{item.about}}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
 
-  <ion-card *ngFor="let item of currentItems" color="secondary">
-    <ion-item-divider color="danger">
-      {{item.name}}
-    </ion-item-divider>
-
-    <ion-item text-wrap (click)="openItem(item)">
-      {{item.about}}
-    </ion-item>
-
-    <ion-row class="bottom-bar">
-      <ion-col>
-        <button ion-button block icon-left clear small color="danger" class="border-right">
-          <ion-icon name="happy"></ion-icon>
-          <small>Going</small>
+      <ion-item-options>
+        <button ion-button color="primary" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
         </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button block icon-left clear small color="danger" class="border-right">
-          <ion-icon name="sad"></ion-icon>
-          <small>Not Going</small>
-        </button>
-      </ion-col>      
-      <ion-col>
-        <button ion-button block icon-left clear small color="danger" class="border-right">
-          <ion-icon name="trash"></ion-icon>
-          <small>Delete</small>
-        </button>        
-      </ion-col>            
-    </ion-row>
-
-  </ion-card>
-
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

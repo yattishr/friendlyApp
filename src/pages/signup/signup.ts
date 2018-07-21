@@ -61,7 +61,7 @@ export class SignupPage {
                 {
                   text: "OK",
                   handler: () => {
-                    this.navCtrl.push(MainPage);
+                    this.navCtrl.setRoot(MainPage);
                   }
                 }
               ]

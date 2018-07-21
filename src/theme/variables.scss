@@ -40,7 +40,8 @@ $colors: (
   searchbarcolor:  #f4f4f4,
   searchbarbordercolor:  #488aff,
   backcolor: #32db64,
-  segmentbutton: #222
+  segmentbutton: #222,
+  semi-light: #f4f4f4  
 );
 
 
@@ -49,7 +50,7 @@ $colors: (
 // iOS only Sass variables can go here
 $searchbar-ios-input-background-color: color($colors, searchbarcolor);
 $searchbar-ios-border-color: color($colors, searchbarbordercolor);
-$label-ios-text-color: color($colors, light);
+$label-ios-text-color: color($colors, dark);
 $list-ios-header-color: color($colors, dark); 
 $list-ios-header-font-size: 1.2rem;
 $segment-button-ios-background-color: color($colors, light);
@@ -59,7 +60,7 @@ $segment-button-ios-background-color: color($colors, light);
 // Material Design only Sass variables can go here
 $searchbar-md-input-background-color: color($colors, searchbarcolor);
 $searchbar-md-border-color: color($colors, searchbarbordercolor);
-$label-md-text-color: color($colors, light);
+$label-md-text-color: color($colors, dark);
 $list-md-header-color: color($colors, dark);
 $segment-button-md-background-color: color($colors, light);
 

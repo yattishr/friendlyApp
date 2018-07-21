@@ -31,7 +31,7 @@
 <ion-content padding>
 
   <h6 text-center>Drinks and Dining | {{ myVal }}</h6>
-  <ion-grid style="width: 80%">
+  <ion-grid>
 
       <ion-row class="rowStyle">
         <ion-label stacked>Venue</ion-label>
@@ -40,12 +40,12 @@
 
       <ion-row class="rowStyle">
         <ion-label stacked>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="diningDate"></ion-datetime>
+        <ion-input type="date" [(ngModel)]="diningDate"></ion-input>
       </ion-row>
 
       <ion-row class="rowStyle">
         <ion-label stacked>Meetup Time</ion-label>
-        <ion-datetime displayFormat="HH:mm" [(ngModel)]="diningMeetUpTime"></ion-datetime>
+        <ion-input type="time" [(ngModel)]="diningMeetUpTime"></ion-input>
       </ion-row>
     <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 

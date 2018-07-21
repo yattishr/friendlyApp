@@ -13,8 +13,12 @@ import firebase from 'firebase';
 })
 export class LoginPage {
 
-  email: string = "test@friendlyapp.com";
+  // email: string = "test@friendlyapp.com";
+  // password: string = "12345678";
+
+  email: string = "yattishr@hotmail.com";
   password: string = "12345678";
+
 
   // The account fields for the login form.
   // If you're using the username field with or without email, make
@@ -40,7 +44,7 @@ export class LoginPage {
   login() {
     firebase.auth().signInWithEmailAndPassword(this.email, this.password).then((user) => {
       console.log(user)
-      this.navCtrl.push(MainPage);
+      this.navCtrl.setRoot(MainPage);
       this.toastCtrl.create({
         message: "Welcome to friend.Ly " + user.user.displayName + "!",
         duration: 3000

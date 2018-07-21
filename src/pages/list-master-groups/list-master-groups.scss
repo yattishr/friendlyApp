@@ -1,3 +1,23 @@
 page-list-master-groups {
-
+    ion-content {
+        .scroll-content {
+            background-color: map-get($colors, backcolor);
+        }
+      } 
+    
+      .item {
+        background-color: map-get($colors, backcolor);
+      }
+    
+      .rowStyle{
+        background-color: white;
+        padding-left: 10px;
+        border-radius: 30px;
+        margin-top: 10px;
+    
+        ion-icon{
+            margin-top: 13px;
+            margin-right: 10px;
+        }        
+      }
 }

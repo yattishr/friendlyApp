@@ -31,29 +31,28 @@
 
 <ion-content padding>
   <h6 text-center>Activity | {{ myVal }}</h6>
-  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+
     <ion-list>
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Venue</ion-label>
-        <ion-input type="text" formControlName="activityVenueName" clearInput="true"></ion-input>
-      </ion-item>
+        <ion-input type="text" [(ngModel)]="activityVenueName" clearInput="true"></ion-input>
+      </ion-row>
 
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate" formControlName="activityDate"></ion-datetime>
-      </ion-item>
+        <ion-input type="date" [(ngModel)]="activityDate"></ion-input>
+      </ion-row>
 
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Time</ion-label>
-        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myActivityTime" formControlName="activityTime"></ion-datetime>
-      </ion-item>
+        <ion-input type="time" [(ngModel)]="activityTime"></ion-input>
+      </ion-row>
 
-      <ion-item>
+      <ion-row class="rowStyle">
         <ion-label stacked>Meetup Time</ion-label>
-        <ion-datetime displayFormat="HH:mm" [(ngModel)]="myMeetupTime" formControlName="activityMeetUpTime"></ion-datetime>
-      </ion-item>
+        <ion-input type="time" [(ngModel)]="myMeetupTime"></ion-input>
+      </ion-row>
     </ion-list>
     <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
-  </form>
 
 </ion-content>

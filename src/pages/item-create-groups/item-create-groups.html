@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar color="headercolor">
+  <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_CREATE_GROUP_TITLE' | translate }}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="cancel()">
@@ -67,7 +67,7 @@
                             clearInput="true"></ion-input>
                       </ion-item>
 
-                      <span float-right
+                      <span float-right padding
                       *ngIf="form.controls.technologies.length > 1">
                         <ion-chip (click)="removeInputField(i)">
                           <ion-icon name="close-circle" color="danger"></ion-icon>
@@ -78,9 +78,9 @@
                 </section>
              </div>
 
-             <span float-left>
+             <span float-left padding>
                <ion-chip (click)="addNewInputField()">
-                 <ion-icon name="add-circle" color="secondary"></ion-icon>
+                 <ion-icon name="add-circle" color="light"></ion-icon>
                  <ion-label>Add Friend</ion-label>
                </ion-chip>
              </span>
