@@ -14,6 +14,7 @@ page-item-create-event-movie {
     padding-left: 10px;
     border-radius: 30px;
     margin-top: 10px;
+    border: solid map-get($colors, danger ) 1px;
 
     ion-icon{
         margin-top: 13px;

@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, LoadingController, ToastController } from 'ionic-angular';
+import firebase from 'firebase';
+
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -12,7 +15,7 @@ import { Items } from '../../providers';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, private loadingCrtl: LoadingController, private toastCtrl: ToastController) {
     this.currentItems = this.items.query();
   }
 
@@ -21,6 +24,19 @@ export class ListMasterPage {
    */
   ionViewDidLoad() {
   }
+
+  // the user clicked the Logout button.
+  logout() {
+    console.log("Logout button clicked...");
+    firebase.auth().signOut().then(() => {
+      this.navCtrl.setRoot(LoginPage);
+      let toast = this.toastCtrl.create({
+        message: "You have been successfully logged out.",
+        duration: 3000
+      }).present();      
+    });
+  }
+
 
   /**
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
@@ -64,26 +80,18 @@ export class ListMasterPage {
     });
   }
 
+
+  /**
+   * Navigate to the relevant Events page.
+   */
   /* Page Types. DO NOT DELETE.
   ItemCreateEventDrinksDiningPage
   ItemCreateEventSportsRecPage
   ItemCreateEventMusicConcertPage
   ItemCreateEventMoviePage
-  */
-
-  /**
-   * Navigate to the relevant Events page.
-   */
+  */  
   navigateToEventsPage(eventPageType) {
-    let addModal = this.modalCtrl.create(eventPageType);
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
+    this.navCtrl.push(eventPageType);
   }
-
-
 
 }
