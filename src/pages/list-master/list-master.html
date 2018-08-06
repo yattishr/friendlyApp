@@ -5,23 +5,23 @@
     <button ion-button menuToggle>
          <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-buttons end>
+    <!--ion-buttons end>
       <button ion-button icon-only clear (click)="logout();">
         <ion-icon name="log-out"></ion-icon>
       </button>
-    </ion-buttons>    
+    </ion-buttons-->    
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
   <ion-fab top right edge>
-      <button ion-fab mini color="light"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab mini color="light"><ion-icon name="heart"></ion-icon></button>
       <ion-fab-list>
         <button ion-fab color="primary" (click)="navigateToEventsPage('ItemCreateEventMoviePage');"><ion-icon name="videocam"></ion-icon></button>
         <button ion-fab color="danger" (click)="navigateToEventsPage('ItemCreateEventDrinksDiningPage');"><ion-icon name="md-restaurant"></ion-icon></button>
         <button ion-fab color="light" (click)="navigateToEventsPage('ItemCreateEventSportsRecPage');"><ion-icon name="american-football"></ion-icon></button>
-        <button ion-fab color="primary" (click)="navigateToEventsPage('ItemCreateEventMusicConcertPage');"><ion-icon name="ios-musical-notes"></ion-icon></button>
+        <button ion-fab color="primary" (click)="navigateToEventsPage('TestpagePage');"><ion-icon name="ios-musical-notes"></ion-icon></button>
+        <button ion-fab color="dark" (click)="logout();"><ion-icon name="log-out"></ion-icon></button>
       </ion-fab-list>
   </ion-fab>
 
@@ -33,6 +33,9 @@
 
     <ion-item text-wrap (click)="openItem(item)">
       {{item.about}}
+      <ion-avatar item-start>
+        <img [src]="item.profilePic" />
+      </ion-avatar>      
     </ion-item>
 
     <ion-row class="bottom-bar">

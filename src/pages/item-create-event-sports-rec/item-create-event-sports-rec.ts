@@ -32,11 +32,18 @@ export class ItemCreateEventSportsRecPage {
 
 
   /* Launch Sports and Rec Detail page. */
-  goTo(dataParam) {
-    let addModal = this.modalCtrl.create('ItemCreateEventSportsRecDetailPage', { dataParam });
-    addModal.present();
-  }
+  // goTo(dataParam) {
+  //   let addModal = this.modalCtrl.create('ItemCreateEventSportsRecDetailPage', { dataParam });
+  //   addModal.present();
+  // }
   /* Launch Sports and Rec Detail page. */
+
+  /* Launch Drinks and Dining Detail page. */
+  goTo(dataParam) {
+    this.navCtrl.push('ItemCreateEventSportsRecDetailPage', { dataParam });
+  }
+  /* Launch Drinks and Dining Detail page. */  
+
 
   /**
    * The user cancelled, so we dismiss without sending data back.

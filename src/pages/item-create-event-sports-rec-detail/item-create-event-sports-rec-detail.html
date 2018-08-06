@@ -8,14 +8,14 @@
 
   <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_SPORTS_RECREATION_EVENT' | translate }}</ion-title>
-    <ion-buttons start>
+    <!--ion-buttons start>
       <button ion-button (click)="cancel()">
         <span color="dark" showWhen="ios">
           {{ 'CANCEL_BUTTON' | translate }}
         </span>
         <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons-->
     <ion-buttons end>
       <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
         <span color="dark" showWhen="ios">
@@ -40,19 +40,19 @@
 
       <ion-row class="rowStyle">
         <ion-label stacked>Date</ion-label>
-        <ion-input type="date" [(ngModel)]="activityDate"></ion-input>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="activityDate"></ion-datetime>
       </ion-row>
 
       <ion-row class="rowStyle">
         <ion-label stacked>Time</ion-label>
-        <ion-input type="time" [(ngModel)]="activityTime"></ion-input>
+        <ion-datetime displayFormat="h:mm A" [(ngModel)]="activityTime"></ion-datetime>
       </ion-row>
 
       <ion-row class="rowStyle">
         <ion-label stacked>Meetup Time</ion-label>
-        <ion-input type="time" [(ngModel)]="myMeetupTime"></ion-input>
+        <ion-datetime displayFormat="h:mm A" [(ngModel)]="myMeetupTime"></ion-datetime>
       </ion-row>
     </ion-list>
-    <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
+    <button ion-button icon-start block clear color="invitegroupbutton" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 
 </ion-content>

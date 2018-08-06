@@ -52,12 +52,12 @@
 
           <ion-row class="rowStyle">
             <ion-label stacked>Concert Date</ion-label>
-            <ion-input type="date" [(ngModel)]="concertDate"></ion-input>
+            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="concertDate"></ion-datetime>
           </ion-row>
 
           <ion-row class="rowStyle">
             <ion-label stacked>Concert Start Time</ion-label>
-            <ion-input type="time" [(ngModel)]="concertStartTime"></ion-input>
+            <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertStartTime"></ion-datetime>
           </ion-row>
 
           <ion-row class="rowStyle">
@@ -67,12 +67,12 @@
 
           <ion-row class="rowStyle">
             <ion-label stacked>Meetup Time</ion-label>
-            <ion-input type="time" [(ngModel)]="concertMeetUpTime"></ion-input>
+            <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertMeetUpTime"></ion-datetime>
           </ion-row>
 
         </ion-list>
 
-        <button ion-button icon-start block clear color="light" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
+        <button ion-button icon-start block clear color="invitegroupbutton" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 
     </ion-list>
   </div>

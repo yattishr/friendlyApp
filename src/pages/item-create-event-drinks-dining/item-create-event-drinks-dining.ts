@@ -36,9 +36,15 @@ export class ItemCreateEventDrinksDiningPage {
   }
 
   /* Launch Drinks and Dining Detail page. */
+  // goTo(dataParam) {
+  //   let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningDetailPage', { dataParam });
+  //   addModal.present();
+  // }
+  /* Launch Drinks and Dining Detail page. */  
+
+  /* Launch Drinks and Dining Detail page. */
   goTo(dataParam) {
-    let addModal = this.modalCtrl.create('ItemCreateEventDrinksDiningDetailPage', { dataParam });
-    addModal.present();
+    this.navCtrl.push('ItemCreateEventDrinksDiningDetailPage', { dataParam });
   }
   /* Launch Drinks and Dining Detail page. */  
 

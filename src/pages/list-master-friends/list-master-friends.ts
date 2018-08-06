@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Platform, LoadingController } from 'ionic-angular';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
@@ -19,9 +20,39 @@ import { Items } from '../../providers';
 export class ListMasterFriendsPage {
     currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public items: Items) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public modalCtrl: ModalController, 
+              public items: Items, 
+              private contacts: Contacts,
+              private plt: Platform,
+              private loadingCrtl: LoadingController) {
     this.currentItems = this.items.query();
+
+    this.plt.ready().then((readySource) => {
+      console.log('Platform ready from', readySource);
+      // Platform now ready, execute any required native code
+      this.initContacts();
+    });
   }
+
+
+  initContacts() {
+    let contact: Contact;
+    // this.contacts = []; // initialize the posts array to blank.
+
+    let loading = this.loadingCrtl.create({
+      content: "Loading Contacts..."
+    });
+    loading.present();
+    // If you want to open the native contacts screen and select the contacts from there use pickContact()
+
+    this.contacts.pickContact()
+    .then((response: Contact) => { 
+      console.log(response)
+    });    
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListMasterFriendsPage');

@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Test Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+              
+          <ion-row>
+            <ion-label stacked>Movie Title</ion-label>
+            <ion-input type="text" [(ngModel)]="movieTitle" id="blank"></ion-input>
+          </ion-row>
+
+          <ion-row>
+            <ion-item>
+              <ion-label stacked>Meetup Time</ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="moviemeetuptime"></ion-datetime>
+            </ion-item>
+          </ion-row>
+
+          <ion-row>
+            <ion-item>
+              <ion-label>Date</ion-label>
+              <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="startDate"></ion-datetime>
+            </ion-item>
+          </ion-row>
+
+          <ion-row>
+            <ion-label stacked>Cinema</ion-label>
+            <ion-input type="text" [(ngModel)]="cinemaName" id="blank"></ion-input>
+          </ion-row>
+
+          <ion-row>
+
+          </ion-row>
+</ion-grid>
+<button ion-button icon-start block clear color="invitegroupbutton" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
+</ion-content>

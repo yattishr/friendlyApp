@@ -25,13 +25,13 @@ export class ItemCreateEventMoviePage {
 
   item: any;
 
-  form: FormGroup;
+  movieEventForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, formBuilder: FormBuilder, public modalCtrl: ModalController, public items: Items) {
 
     this.currentItems = this.items.query();
 
-    this.form = formBuilder.group({
+    this.movieEventForm = formBuilder.group({
       movieName: ['', Validators.required],
       movieDate: [''],
       movieCinema: [''],
@@ -40,8 +40,8 @@ export class ItemCreateEventMoviePage {
     });
 
     // Watch the form for changes, and
-    this.form.valueChanges.subscribe((v) => {
-      this.isReadyToSave = this.form.valid;
+    this.movieEventForm.valueChanges.subscribe((v) => {
+      this.isReadyToSave = this.movieEventForm.valid;
     });
 
 
@@ -65,7 +65,7 @@ export class ItemCreateEventMoviePage {
 
   createItem() {
     console.log("create item function triggered...");
-    this.viewCtrl.dismiss(this.form.value);
+    this.viewCtrl.dismiss(this.movieEventForm.value);
   }
 
   /**
@@ -80,8 +80,8 @@ export class ItemCreateEventMoviePage {
    * back to the presenter.
    */
   done() {
-    if (!this.form.valid) { return; }
-    this.viewCtrl.dismiss(this.form.value);
+    if (!this.movieEventForm.valid) { return; }
+    this.viewCtrl.dismiss(this.movieEventForm.value);
   }
 
 

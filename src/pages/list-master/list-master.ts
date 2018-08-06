@@ -27,9 +27,9 @@ export class ListMasterPage {
 
   // the user clicked the Logout button.
   logout() {
-    console.log("Logout button clicked...");
     firebase.auth().signOut().then(() => {
-      this.navCtrl.setRoot(LoginPage);
+      // this.navCtrl.setRoot(LoginPage);
+      this.navCtrl.parent.parent.setRoot(LoginPage);
       let toast = this.toastCtrl.create({
         message: "You have been successfully logged out.",
         duration: 3000
