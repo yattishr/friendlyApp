@@ -43,32 +43,50 @@
 
   <div [ngSwitch]="segment">
     <ion-list *ngSwitchCase="'ConcertInfo'">
-      
+        <ion-grid>
+
+          <ion-row class="rowStyle">
+              <ion-label>What Concert</ion-label>
+              <ion-input type="text" [(ngModel)]="concertName"></ion-input>
+          </ion-row>          
+
+          <ion-row>
+            <ion-item class="rowStyle">
+              <ion-label>Concert Date</ion-label>
+              <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="concertDate"></ion-datetime>
+            </ion-item>
+          </ion-row>    
+
+            <ion-row>
+              <ion-item class="rowStyle">
+                <ion-label>Concert Start Time</ion-label>
+                <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertStartTime"></ion-datetime>
+              </ion-item>
+            </ion-row>
+              
+            <ion-row class="rowStyle">
+                <ion-label>Concert Venue</ion-label>
+                <ion-input type="text" [(ngModel)]="concertVenue"></ion-input>
+            </ion-row>              
+              
+            <ion-row>
+              <ion-item class="rowStyle">
+                <ion-label>Meetup Time</ion-label>
+                <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertMeetUpTime"></ion-datetime>
+              </ion-item>
+            </ion-row>                
+
+        </ion-grid>
         <ion-list>
-          <ion-row class="rowStyle">
-            <ion-label stacked>What Concert</ion-label>
-            <ion-input type="text" [(ngModel)]="concertName" clearInput="true"></ion-input>
-          </ion-row>
 
-          <ion-row class="rowStyle">
-            <ion-label stacked>Concert Date</ion-label>
-            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="concertDate"></ion-datetime>
-          </ion-row>
 
-          <ion-row class="rowStyle">
-            <ion-label stacked>Concert Start Time</ion-label>
-            <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertStartTime"></ion-datetime>
-          </ion-row>
 
-          <ion-row class="rowStyle">
-            <ion-label stacked>Concert Venue</ion-label>
-            <ion-input type="text" [(ngModel)]="concertVenue" clearInput="true"></ion-input>
-          </ion-row>
 
-          <ion-row class="rowStyle">
-            <ion-label stacked>Meetup Time</ion-label>
-            <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertMeetUpTime"></ion-datetime>
-          </ion-row>
+
+
+
+
+
 
         </ion-list>
 

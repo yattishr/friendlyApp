@@ -27,18 +27,18 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
   <div padding>
     <button ion-button color="primary" block round outline (click)="scan()">Begin Scan</button>
-    <button ion-button color="light" block round outline (click)="makeBooking()" style="margin-top: 20px;">Make Booking</button>
+    <button ion-button color="secondary" block round outline (click)="makeBooking()" style="margin-top: 20px;">Make Booking</button>
   </div>
 
   <ion-card *ngIf="productFound">
     <ion-card-header>
       <h2>Event Information</h2>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content text-wrap>
       <ul>
         <li><strong>{{selectedProduct.name}}</strong></li>
         <li>{{selectedProduct.desc}}</li>

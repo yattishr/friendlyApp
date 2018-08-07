@@ -13,42 +13,61 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
-    <button ion-item (click)="goTo('Picnic')">
-      <ion-icon name="md-restaurant" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_1' | translate }}
-    </button>
+<ion-content>
+    <ion-card (click)="goTo('Picnic')">
+        <ion-item-divider color="danger">
+            <ion-icon name="basket" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_1' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
 
-    <button ion-item (click)="goTo('Hiking')">
-      <ion-icon name="ios-walk-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_2' | translate }}
-    </button>
+    <ion-card (click)="goTo('Hiking')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-walk-outline" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_2' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
+    
+    <ion-card (click)="goTo('Indoor Soccer')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-football" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_3' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
+    
+    <ion-card (click)="goTo('Indoor Cricket')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-baseball-outline" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_4' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
+    
+    <ion-card (click)="goTo('Live Football Game')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-football-outline" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_5' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
+    
+    <ion-card (click)="goTo('Dog Park')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-paw" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_6' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>
+    
+    <ion-card (click)="goTo('Zoo')">
+        <ion-item-divider color="danger">
+            <ion-icon name="ios-paw-outline" item-start></ion-icon>
+            {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_7' | translate }}
+            <ion-icon name="arrow-dropright" item-end></ion-icon>
+          </ion-item-divider>
+    </ion-card>    
 
-    <button ion-item (click)="goTo('Indoor Soccer')">
-      <ion-icon name="ios-football" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_3' | translate }}
-    </button>
-
-    <button ion-item (click)="goTo('Indoor Cricket')">
-      <ion-icon name="ios-baseball-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_4' | translate }}
-    </button>
-
-    <button ion-item (click)="goTo('Live Football Game')">
-      <ion-icon name="ios-football-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_5' | translate }}
-    </button>
-
-    <button ion-item (click)="goTo('Dog Park')">
-      <ion-icon name="ios-paw" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_6' | translate }}
-    </button>
-
-    <button ion-item (click)="goTo('Zoo')">
-      <ion-icon name="ios-paw-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_SPORTS_REC_PLACEHOLDER_7' | translate }}
-    </button>
-
-  </ion-list>
 </ion-content>

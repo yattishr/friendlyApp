@@ -12,38 +12,53 @@
 
 </ion-header>
 
+<ion-content>
+  <ion-card (click)="goTo('Drinks')">
+      <ion-item-divider color="danger">
+          <ion-icon name="ios-wine" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_1' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-<ion-content padding>
-  <ion-list>
-    <button ion-item (click)="goTo('Drinks')">
-      <ion-icon name="ios-wine" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_1' | translate }}
-    </button>
+  <ion-card (click)="goTo('Coffee')">
+      <ion-item-divider color="danger">
+          <ion-icon name="cafe" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_2' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-    <button ion-item (click)="goTo('Coffee')">
-      <ion-icon name="cafe" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_2' | translate }}
-    </button>
+  <ion-card (click)="goTo('Lunch')">
+      <ion-item-divider color="danger">
+          <ion-icon name="md-restaurant" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_3' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-    <button ion-item (click)="goTo('Lunch')">
-      <ion-icon name="md-restaurant" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_3' | translate }}
-    </button>
+  <ion-card (click)="goTo('Dinner')">
+      <ion-item-divider color="danger">
+          <ion-icon name="ios-restaurant" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_4' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-    <button ion-item (click)="goTo('Dinner')">
-      <ion-icon name="ios-restaurant" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_4' | translate }}
-    </button>
+  <ion-card (click)="goTo('Fine Dining')">
+      <ion-item-divider color="danger">
+          <ion-icon name="ios-bowtie-outline" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_5' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-    <button ion-item (click)="goTo('Fine Dining')">
-      <ion-icon name="ios-bowtie-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_5' | translate }}
-    </button>
+  <ion-card (click)="goTo('Breakfast')">
+      <ion-item-divider color="danger">
+          <ion-icon name="ios-cafe-outline" item-start></ion-icon>
+          {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_6' | translate }}
+          <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </ion-item-divider>
+  </ion-card>
 
-    <button ion-item (click)="goTo('Breakfast')">
-      <ion-icon name="ios-cafe-outline" item-start></ion-icon>
-      {{ 'ITEM_MENU_DRINKS_DINING_PLACEHOLDER_6' | translate }}
-    </button>
-
-  </ion-list>
 </ion-content>

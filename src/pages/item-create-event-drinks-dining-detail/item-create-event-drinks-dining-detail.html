@@ -34,18 +34,22 @@
   <ion-grid>
 
       <ion-row class="rowStyle">
-        <ion-label stacked>Venue</ion-label>
+        <ion-label>Venue</ion-label>
         <ion-input type="text" [(ngModel)]="diningVenueName" clearInput="true"></ion-input>
       </ion-row>
 
-      <ion-row class="rowStyle">
-        <ion-label stacked>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="diningDate"></ion-datetime>
+      <ion-row>
+        <ion-item class="rowStyle">
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="diningDate"></ion-datetime>
+        </ion-item>
       </ion-row>
 
-      <ion-row class="rowStyle">
-        <ion-label stacked>Meetup Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" [(ngModel)]="diningMeetUpTime"></ion-datetime>
+      <ion-row>
+        <ion-item class="rowStyle">
+          <ion-label>Meetup Time</ion-label>
+          <ion-datetime displayFormat="h:mm A" [(ngModel)]="diningMeetUpTime"></ion-datetime>
+        </ion-item>
       </ion-row>
     <button ion-button icon-start block clear color="invitegroupbutton" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 
 

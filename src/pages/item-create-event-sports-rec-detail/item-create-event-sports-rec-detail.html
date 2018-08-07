@@ -34,23 +34,29 @@
 
     <ion-list>
       <ion-row class="rowStyle">
-        <ion-label stacked>Venue</ion-label>
+        <ion-label>Venue</ion-label>
         <ion-input type="text" [(ngModel)]="activityVenueName" clearInput="true"></ion-input>
       </ion-row>
 
-      <ion-row class="rowStyle">
-        <ion-label stacked>Date</ion-label>
-        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="activityDate"></ion-datetime>
+      <ion-row>
+        <ion-item class="rowStyle">
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="activityDate"></ion-datetime>
+        </ion-item>
       </ion-row>
 
-      <ion-row class="rowStyle">
-        <ion-label stacked>Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" [(ngModel)]="activityTime"></ion-datetime>
+      <ion-row>
+        <ion-item class="rowStyle">
+          <ion-label>Time</ion-label>
+          <ion-datetime displayFormat="h:mm A" [(ngModel)]="activityTime"></ion-datetime>
+        </ion-item>
       </ion-row>
 
-      <ion-row class="rowStyle">
-        <ion-label stacked>Meetup Time</ion-label>
+      <ion-row>
+      <ion-item class="rowStyle">
+        <ion-label>Meetup Time</ion-label>
         <ion-datetime displayFormat="h:mm A" [(ngModel)]="myMeetupTime"></ion-datetime>
+      </ion-item>
       </ion-row>
     </ion-list>
     <button ion-button icon-start block clear color="invitegroupbutton" (click)="itemGroupSelect();"><ion-icon name="add-circle"></ion-icon>Invite Friends</button> 

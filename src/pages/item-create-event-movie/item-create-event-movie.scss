@@ -7,6 +7,7 @@ page-item-create-event-movie {
 
   .item {
     background-color: map-get($colors, backcolor);
+    text-align: left;
   }
 
   .rowStyle{
