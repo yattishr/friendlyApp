@@ -1,26 +1,19 @@
 page-item-create-event-sports-rec-detail {
   ion-content {
     .scroll-content {
-        background-color: map-get($colors, backcolor);
+        background-color: map-get($colors, light);
     }
   } 
 
   .item {
-    background-color: map-get($colors, backcolor);
+    background-color: map-get($colors, danger);
     text-align: left;
-  }
-
-
-  h6 {
-    color: white;
-    font-weight: bold;
-    border: 5px;
   }
 
   .rowStyle{
     background-color: white;
     padding-left: 10px;
-    border-radius: 30px;
+    border-radius: 15px;
     margin-top: 10px;
     border: solid map-get($colors, danger ) 1px;
 

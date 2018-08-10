@@ -8,46 +8,41 @@
 
   <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_DRINKS_DINING_EVENT' | translate }}</ion-title>
-    <!--ion-buttons start>
-      <button ion-button (click)="cancel()">
-        <span color="dark" showWhen="ios">
-          {{ 'CANCEL_BUTTON' | translate }}
-        </span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
-    </ion-buttons-->
     <ion-buttons end>
-      <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
-        <span color="dark" showWhen="ios">
-          {{ 'DONE_BUTTON' | translate }}
-        </span>
-        <ion-icon name="send" showWhen="core,android,windows"></ion-icon>
-      </button>
+        <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
+          <ion-icon name="paper-plane"></ion-icon>
+        </button>
     </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-  <h6 text-center>Drinks and Dining | {{ myVal }}</h6>
+  <ion-card>
+      <ion-item-divider color="danger">
+          <ion-icon name="restaurant" item-start></ion-icon>
+          Drinks and Dining | {{ myVal }}          
+        </ion-item-divider>
+  </ion-card>
+
   <ion-grid>
 
       <ion-row class="rowStyle">
-        <ion-label>Venue</ion-label>
+        <ion-label fixed>Venue</ion-label>
         <ion-input type="text" [(ngModel)]="diningVenueName" clearInput="true"></ion-input>
       </ion-row>
 
       <ion-row>
         <ion-item class="rowStyle">
-          <ion-label>Date</ion-label>
+          <ion-label fixed>Date</ion-label>
           <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="diningDate"></ion-datetime>
         </ion-item>
       </ion-row>
 
       <ion-row>
         <ion-item class="rowStyle">
-          <ion-label>Meetup Time</ion-label>
+          <ion-label fixed>Meetup Time</ion-label>
           <ion-datetime displayFormat="h:mm A" [(ngModel)]="diningMeetUpTime"></ion-datetime>
         </ion-item>
       </ion-row>

@@ -8,28 +8,17 @@
 
   <ion-navbar color="tabcolor">
     <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | {{ 'ITEM_MUSIC_CONCERT_EVENT' | translate }}</ion-title>
-    <ion-buttons start>
-      <!--button ion-button (click)="cancel()">
-        <span color="dark" showWhen="ios">
-          {{ 'CANCEL_BUTTON' | translate }}
-        </span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button-->
-    </ion-buttons>
     <ion-buttons end>
-      <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
-        <span color="dark" showWhen="ios">
-          {{ 'DONE_BUTTON' | translate }}
-        </span>
-        <ion-icon name="send" showWhen="core,android,windows"></ion-icon>
-      </button>
-    </ion-buttons>
+        <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
+          <ion-icon name="paper-plane"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <div padding>
     <ion-segment [(ngModel)]="segment" color="segmentbutton">
       <ion-segment-button value="ConcertInfo">
@@ -46,32 +35,32 @@
         <ion-grid>
 
           <ion-row class="rowStyle">
-              <ion-label>What Concert</ion-label>
+              <ion-label fixed>What Concert</ion-label>
               <ion-input type="text" [(ngModel)]="concertName"></ion-input>
           </ion-row>          
 
           <ion-row>
             <ion-item class="rowStyle">
-              <ion-label>Concert Date</ion-label>
+              <ion-label fixed>Concert Date</ion-label>
               <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="concertDate"></ion-datetime>
             </ion-item>
           </ion-row>    
 
             <ion-row>
               <ion-item class="rowStyle">
-                <ion-label>Concert Start Time</ion-label>
+                <ion-label fixed>Start Time</ion-label>
                 <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertStartTime"></ion-datetime>
               </ion-item>
             </ion-row>
               
             <ion-row class="rowStyle">
-                <ion-label>Concert Venue</ion-label>
+                <ion-label fixed>Concert Venue</ion-label>
                 <ion-input type="text" [(ngModel)]="concertVenue"></ion-input>
             </ion-row>              
               
             <ion-row>
               <ion-item class="rowStyle">
-                <ion-label>Meetup Time</ion-label>
+                <ion-label fixed>Meetup Time</ion-label>
                 <ion-datetime displayFormat="h:mm A" [(ngModel)]="concertMeetUpTime"></ion-datetime>
               </ion-item>
             </ion-row>                

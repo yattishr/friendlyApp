@@ -13,11 +13,11 @@ import firebase from 'firebase';
 })
 export class LoginPage {
 
-  // email: string = "test@friendlyapp.com";
-  // password: string = "12345678";
-
-  email: string = "yattishr@hotmail.com";
+  email: string = "test@friendlyapp.com";
   password: string = "12345678";
+
+  // email: string = "yattishr@hotmail.com";
+  // password: string = "12345678";
 
 
   // The account fields for the login form.

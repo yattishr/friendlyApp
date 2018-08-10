@@ -13,7 +13,7 @@ page-item-create-event-movie {
   .rowStyle{
     background-color: white;
     padding-left: 10px;
-    border-radius: 30px;
+    border-radius: 15px; // was 30px
     margin-top: 10px;
     border: solid map-get($colors, danger ) 1px;
 
