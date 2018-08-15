@@ -10,6 +10,12 @@ page-login {
       background-color: map-get($colors, danger);
   }
 
+  .splashlogo{
+    width: 50%; // was 128px
+    height: 50%; // was 128px
+    text-align: center;
+  }
+
   .logo {
       font-size: 25vh;
       margin-top: 50px;

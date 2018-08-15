@@ -30,8 +30,7 @@
 <ion-content>
 
   <div padding>
-    <button ion-button color="primary" block round outline (click)="scan()">Begin Scan</button>
-    <button ion-button color="secondary" block round outline (click)="makeBooking()" style="margin-top: 20px;">Make Booking</button>
+    <button ion-button color="primary" block round (click)="scan()">Begin Scan</button>
   </div>
 
   <ion-card *ngIf="productFound">
@@ -42,11 +41,12 @@
       <ul>
         <li><strong>{{selectedProduct.name}}</strong></li>
         <li>{{selectedProduct.desc}}</li>
-        <li>Price: $ {{selectedProduct.price}}</li>
+        <li>Price: R {{selectedProduct.price}}</li>
         <li>{{selectedProduct.datetime}}</li>
         <li>{{selectedProduct.plu}}</li>
       </ul>
     </ion-card-content>
+    <button ion-button color="secondary" block round (click)="makeBooking(selectedProduct.name)" style="margin-top: 20px;">Add to Cart</button>    
   </ion-card>
 
 </ion-content>

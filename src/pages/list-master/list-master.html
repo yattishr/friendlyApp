@@ -24,8 +24,7 @@
         <button ion-fab color="dark" (click)="logout();"><ion-icon name="log-out"></ion-icon></button>
       </ion-fab-list>
   </ion-fab>
-
-
+  
   <ion-card *ngFor="let item of currentItems" color="secondary">
     <ion-item-divider color="danger">
       {{item.name}}

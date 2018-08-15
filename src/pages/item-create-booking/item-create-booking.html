@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="tabcolor">
+    <ion-title>{{ 'APP_TITLE_TEXT' | translate }} | Shopping Cart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card>
+  <ion-item-divider color="danger">
+    Concert Information | {{ myVal }}
+  </ion-item-divider>
+</ion-card>
+
+
+<ion-card>
+  <img src="./assets/img/seating_layout.png" width="100%" height="100%"/>
+  <!--ion-card-content>
+    <ion-card-title>
+      
+    </ion-card-title>
+    <p>
+      
+    </p>
+  </ion-card-content-->
+</ion-card>
+
+<ion-card color="light">
+<ion-row>
+  <ion-col>
+    Ticket Type
+  </ion-col>
+  <ion-col>
+    Price
+  </ion-col>
+  <ion-col>
+    Quantity
+  </ion-col>
+</ion-row>
+</ion-card>
+
+<ion-card>
+  <ion-row>
+    <ion-col>
+      Admission
+    </ion-col>
+    <ion-col>
+      100
+    </ion-col>
+    <ion-col>
+      <ion-input type="number" [(ngModel)]="quantity"></ion-input>
+    </ion-col>
+  </ion-row>
+  </ion-card>
+
+<button ion-button icon-start outline block (click)="checkOut()" color="secondary">
+  <ion-icon name="cart"></ion-icon>Checkout
+</button>
+</ion-content>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Toast } from '@ionic-native/toast';
 import { DataServiceProvider } from '../../providers/data-service/data-service';
+// import { ItemCreateBookingPage } from '../item-create-booking/item-create-booking';
 
 /**
  * Generated class for the ItemScanQrCodePage page.
@@ -64,6 +65,13 @@ export class ItemScanQrCodePage {
     });
   }
   /* QR Scan Function */
+
+  // load the booking page.
+  makeBooking(dataParam) {
+    this.navCtrl.push('ItemCreateBookingPage', { dataParam });
+  }
+  // load the booking page.
+  
 
   cancel() {
     this.viewCtrl.dismiss();

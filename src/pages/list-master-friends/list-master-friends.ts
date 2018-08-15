@@ -39,17 +39,17 @@ export class ListMasterFriendsPage {
 
   initContacts() {
     let contact: Contact;
-    // this.contacts = []; // initialize the posts array to blank.
+    // this.contacts = []; // initialize the posts array to blank.    
 
-    let loading = this.loadingCrtl.create({
-      content: "Loading Contacts..."
-    });
-    loading.present();
     // If you want to open the native contacts screen and select the contacts from there use pickContact()
 
     this.contacts.pickContact()
     .then((response: Contact) => { 
       console.log(response)
+      let loading = this.loadingCrtl.create({
+        content: "Loading Contacts..."
+      });
+      loading.present();            
     });    
   }
 

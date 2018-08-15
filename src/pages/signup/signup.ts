@@ -43,7 +43,7 @@ export class SignupPage {
   }
 
   signup() {
-    console.log(this.name, this.email, this.password);
+    console.log(this.name, this.email, this.password, this.birthday);
     firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
     .then((data) => {
       console.log(data);
